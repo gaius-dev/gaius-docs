@@ -15,14 +15,10 @@ jobs:
     - name: Run gaius process
       run: |
         dotnet ./bin/gaius/gaius.dll process -y
-    - name: Commit files to gh-pages branch
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git commit -m "Gauis process" -a
-    - name: Push changes to gh-pages branch
-      uses: ad-m/github-push-action@master
-      with:
-        directory: ./_generated
-        branch: gh-pages
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Push generated files to gh-pages branch
+      uses: s0/git-publish-subdir-action@master
+      env:
+        REPO: self
+        BRANCH: gh-pages
+        FOLDER: _generated
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}}
