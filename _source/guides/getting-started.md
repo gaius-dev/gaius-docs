@@ -149,6 +149,7 @@ The main configuration file for the Gaius engine is `gaius.json`.  Open it and l
     "GenerationRootPrefix" : "//rstrube.github.io"
 }
 ```
+**Important Note: It's recommened that you omit the protocol (e.g. `http://`, `https://`) and instead just use `//`.  This tells the browser to use whatever protocol is currently active.**
 
 ### 6. Initial Commit
 
