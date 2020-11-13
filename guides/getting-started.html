@@ -21,8 +21,8 @@
 
     <div class="container">
 
-        <a class="navbar-brand" href="/gaius-docs/">
-            <img src="/gaius-docs/images/gaius-logo.png" style="height: 50px;" />
+        <a class="navbar-brand" href="//gaius-dev.github.io/gaius-docs/">
+            <img src="//gaius-dev.github.io/gaius-docs/images/gaius-logo.png" style="height: 50px;" />
         </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,13 +32,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto mr-3">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/gaius-docs/">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="//gaius-dev.github.io/gaius-docs/">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/gaius-docs/guides/getting-started.html">Getting Started</a>
+                    <a class="nav-link" href="//gaius-dev.github.io/gaius-docs/guides/getting-started.html">Getting Started</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/gaius-docs/guides/authoring-content.html">Authoring Content</a>
+                    <a class="nav-link" href="//gaius-dev.github.io/gaius-docs/guides/authoring-content.html">Authoring Content</a>
                 </li>
             </ul>
         </div>
@@ -56,6 +56,7 @@
 <li>Clone the Gaius starter site.</li>
 <li>Create a new repo in Github for your site.</li>
 <li>Change your default remote to point to your new Github repo.</li>
+<li>Configure <code>gaius.json</code></li>
 <li>Make your initial commit.</li>
 <li>Configure Github Pages for your repo.</li>
 </ol>
@@ -114,7 +115,7 @@ Gaius CLI wrapper version 0.0.7
 <p>There are some key differences between the way you create a repository for a user/organization site vs. a site for a github project. Please consult the official <a href="https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/creating-a-github-pages-site">Github Pages documentation</a> for more information.</p>
 <p>This Guide will assume that you are creating a user site.</p>
 <p><strong>Important Note: When creating a new user based site it's extremely important to name the repository <code>&lt;user&gt;.github.io</code> e.g. <code>rstrube.github.io</code>.</strong></p>
-<p><img src="/gaius-docs/images/guides/getting-started/new-repo.png" alt="New Repo Creation" /></p>
+<p><img src="//gaius-dev.github.io/gaius-docs/images/guides/getting-started/new-repo.png" alt="New Repo Creation" /></p>
 <h3>4. Updating Remotes</h3>
 <p>The cloned <code>gaius-starter</code> repo is still pointing to an <code>origin</code> that is associated with <code>https://github.com/gaius-dev/gaius-starter</code>.  In fact if you run <code>git remote -v</code> you'll see the following:</p>
 <pre><code>$ git remote -v 
@@ -135,7 +136,14 @@ $ git remote add origin https://github.com/&lt;user&gt;/&lt;user&gt;.github.io.g
 # Confirm that you successfully added the new origin remote
 $ git remote -v
 </code></pre>
-<h3>5. Initial Commit</h3>
+<h3>5. Configure Gaius.json</h3>
+<p>The main configuration file for the Gaius engine is <code>gaius.json</code>.  Open it and look for the <code>GenerationRootPrefix</code> setting.  It should currently be set to <code>//gaius-dev.github.io/gaius-starter</code>.  You need to update this value to the URL that will be used to access your Github Pages site.  Here is an example <code>gaius.json</code> file that is used for my Github Pages user site [https://rstrube.github.io].</p>
+<pre><code>{
+    &quot;Worker&quot; : &quot;Gaius.Core.Worker.MarkdownLiquid.MarkdownLiquidWorker&quot;,
+    &quot;GenerationRootPrefix&quot; : &quot;//rstrube.github.io&quot;
+}
+</code></pre>
+<h3>6. Initial Commit</h3>
 <p>Gaius behaves differently than some other static site generation platforms in that you don't actually need to commit the generated assets.  The Github Actions workflow that comes with Gaius will automatically trigger and generate your site assets whenever you commit source data to the <code>main</code> branch.  These generated assets will then be committed <em>automatically</em> to the <code>gh-pages</code> branch (assuming there is no error generating site).The <code>gh-pages</code> branch is used by default by Github Pages.</p>
 <p>For now go ahead and make your initial commit:</p>
 <pre><code>$ git add .
@@ -143,17 +151,17 @@ $ git commit -m &quot;Initial commit&quot;
 $ git push -u origin main
 </code></pre>
 <p>You should now see your initial commit appear in your <code>main</code> branch within your repository:</p>
-<p><img src="/gaius-docs/images/guides/getting-started/initial-commit.png" alt="Initial Commit" /></p>
+<p><img src="//gaius-dev.github.io/gaius-docs/images/guides/getting-started/initial-commit.png" alt="Initial Commit" /></p>
 <p>In addition, if you click on <strong>Actions</strong> tab you should see that a workflow has already been kicked off which is generating your site from your source input data.  This workflow might have already completed by the time you examine the <strong>Actions</strong> tab.  If the workflow succeeded you should see something like:</p>
-<p><img src="/gaius-docs/images/guides/getting-started/initial-workflow-run.png" alt="Initial Workflow Run" /></p>
+<p><img src="//gaius-dev.github.io/gaius-docs/images/guides/getting-started/initial-workflow-run.png" alt="Initial Workflow Run" /></p>
 <p>You can always view workflow runs to troubleshoot generation errors.</p>
-<h3>6. Configure Repository for Github Pages</h3>
+<h3>7. Configure Repository for Github Pages</h3>
 <p>The final step is to configure your repository to support Github Pages.</p>
 <p>To do this navigate to the <strong>Settings -&gt; Options-</strong> tab for your repository.  Scroll down until you see the Github Pages configuration.  It's most likely configured to use the <code>main</code> branch by default.  Change this branch to <code>gh-pages</code>.  This will configure the Github Pages infrastructure to look in your <code>gh-pages</code> branch for your site resources (i.e. the generated HTML, images, etc.).</p>
-<p><img src="/gaius-docs/images/guides/getting-started/gh-pages-config.png" alt="Github Pages Configuration" /></p>
+<p><img src="//gaius-dev.github.io/gaius-docs/images/guides/getting-started/gh-pages-config.png" alt="Github Pages Configuration" /></p>
 <p>You should now be able to navigate to: <code>https://&lt;user&gt;.github.io</code> to view your generated site (e.g. [https://rstrube.github.io]).  It should look something like:</p>
-<p><img src="/gaius-docs/images/guides/getting-started/initial-generated-site.png" alt="Initial Generated Site" /></p>
-<p>Congratulations you're now ready to view our <a href="/gaius-docs/guides/authoring-content.html">Authoring Content Guide</a> to learn more about creating new content for your site!</p>
+<p><img src="//gaius-dev.github.io/gaius-docs/images/guides/getting-started/initial-generated-site.png" alt="Initial Generated Site" /></p>
+<p>Congratulations you're now ready to view our <a href="//gaius-dev.github.io/gaius-docs/guides/authoring-content.html">Authoring Content Guide</a> to learn more about creating new content for your site!</p>
 
 
     </div>
