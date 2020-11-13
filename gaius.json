@@ -1,4 +1,4 @@
 {
     "Worker" : "Gaius.Core.Worker.MarkdownLiquid.MarkdownLiquidWorker",
-    "GenerationRootPrefix" : "//gaius-dev.github.io/gaius-docs"
+    "GenerationUrlRootPrefix" : "//gaius-dev.github.io/gaius-docs"
 }
