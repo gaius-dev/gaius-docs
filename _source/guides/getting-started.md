@@ -14,6 +14,7 @@ Getting started with Gaius is a snap!
 1. Clone the Gaius starter site.
 1. Create a new repo in Github for your site.
 1. Change your default remote to point to your new Github repo.
+1. Configure `gaius.json`
 1. Make your initial commit.
 1. Configure Github Pages for your repo.
 
@@ -137,7 +138,19 @@ $ git remote add origin https://github.com/<user>/<user>.github.io.git
 # Confirm that you successfully added the new origin remote
 $ git remote -v
 ```
-### 5. Initial Commit
+
+### 5. Configure Gaius.json
+
+The main configuration file for the Gaius engine is `gaius.json`.  Open it and look for the `GenerationRootPrefix` setting.  It should currently be set to `//gaius-dev.github.io/gaius-starter`.  You need to update this value to the URL that will be used to access your Github Pages site.  Here is an example `gaius.json` file that is used for my Github Pages user site [https://rstrube.github.io].
+
+```
+{
+    "Worker" : "Gaius.Core.Worker.MarkdownLiquid.MarkdownLiquidWorker",
+    "GenerationRootPrefix" : "//rstrube.github.io"
+}
+```
+
+### 6. Initial Commit
 
 Gaius behaves differently than some other static site generation platforms in that you don't actually need to commit the generated assets.  The Github Actions workflow that comes with Gaius will automatically trigger and generate your site assets whenever you commit source data to the `main` branch.  These generated assets will then be committed *automatically* to the `gh-pages` branch (assuming there is no error generating site).The `gh-pages` branch is used by default by Github Pages.
 
@@ -158,7 +171,7 @@ In addition, if you click on **Actions** tab you should see that a workflow has 
 
 You can always view workflow runs to troubleshoot generation errors.
 
-### 6. Configure Repository for Github Pages
+### 7. Configure Repository for Github Pages
 
 The final step is to configure your repository to support Github Pages.
 
