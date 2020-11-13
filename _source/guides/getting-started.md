@@ -154,7 +154,7 @@ You should now see your initial commit appear in your `main` branch within your 
 
 In addition, if you click on **Actions** tab you should see that a workflow has already been kicked off which is generating your site from your source input data.  This workflow might have already completed by the time you examine the **Actions** tab.  If the workflow succeeded you should see something like:
 
-![Initial Workflow Run]({{rp}}/gaius-docs/images/guides/getting-started/initial-workflow-run.png)
+![Initial Workflow Run]({{rp}}/images/guides/getting-started/initial-workflow-run.png)
 
 You can always view workflow runs to troubleshoot generation errors.
 
