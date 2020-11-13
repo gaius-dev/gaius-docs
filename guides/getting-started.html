@@ -143,6 +143,7 @@ $ git remote -v
     &quot;GenerationRootPrefix&quot; : &quot;//rstrube.github.io&quot;
 }
 </code></pre>
+<p><strong>Important Note: It's recommened that you omit the protocol (e.g. <code>http://</code>, <code>https://</code>) and instead just use <code>//</code>.  This tells the browser to use whatever protocol is currently active.</strong></p>
 <h3>6. Initial Commit</h3>
 <p>Gaius behaves differently than some other static site generation platforms in that you don't actually need to commit the generated assets.  The Github Actions workflow that comes with Gaius will automatically trigger and generate your site assets whenever you commit source data to the <code>main</code> branch.  These generated assets will then be committed <em>automatically</em> to the <code>gh-pages</code> branch (assuming there is no error generating site).The <code>gh-pages</code> branch is used by default by Github Pages.</p>
 <p>For now go ahead and make your initial commit:</p>
