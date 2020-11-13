@@ -88,8 +88,8 @@ $ ./gaius.sh
   \____|\__,_|_|\__,_|___/
                           
 
-Gaius 0.0.6
-Gaius CLI wrapper version 0.0.6
+Gaius 0.0.7
+Gaius CLI wrapper version 0.0.7
 ```
 
 This displays both the Gaius engine and CLI versions.  They should always be the same (unless you're doing something very specialized like beta testing a new version of our engine/CLI).
@@ -110,7 +110,7 @@ This Guide will assume that you are creating a user site.
 
 **Important Note: When creating a new user based site it's extremely important to name the repository `<user>.github.io` e.g. `rstrube.github.io`.**
 
-![New Repo Creation](/gaius-docs/images/guides/getting-started/new-repo.png)
+![New Repo Creation]({{rp}}/images/guides/getting-started/new-repo.png)
 
 ### 4. Updating Remotes
 
@@ -150,11 +150,11 @@ $ git push -u origin main
 ```
 You should now see your initial commit appear in your `main` branch within your repository:
 
-![Initial Commit](/gaius-docs/images/guides/getting-started/initial-commit.png)
+![Initial Commit]({{rp}}/images/guides/getting-started/initial-commit.png)
 
 In addition, if you click on **Actions** tab you should see that a workflow has already been kicked off which is generating your site from your source input data.  This workflow might have already completed by the time you examine the **Actions** tab.  If the workflow succeeded you should see something like:
 
-![Initial Workflow Run](/gaius-docs/images/guides/getting-started/initial-workflow-run.png)
+![Initial Workflow Run]({{rp}}/gaius-docs/images/guides/getting-started/initial-workflow-run.png)
 
 You can always view workflow runs to troubleshoot generation errors.
 
@@ -164,10 +164,10 @@ The final step is to configure your repository to support Github Pages.
 
 To do this navigate to the **Settings -> Options-** tab for your repository.  Scroll down until you see the Github Pages configuration.  It's most likely configured to use the `main` branch by default.  Change this branch to `gh-pages`.  This will configure the Github Pages infrastructure to look in your `gh-pages` branch for your site resources (i.e. the generated HTML, images, etc.).
 
-![Github Pages Configuration](/gaius-docs/images/guides/getting-started/gh-pages-config.png)
+![Github Pages Configuration]({{rp}}/images/guides/getting-started/gh-pages-config.png)
 
 You should now be able to navigate to: `https://<user>.github.io` to view your generated site (e.g. [https://rstrube.github.io]).  It should look something like:
 
-![Initial Generated Site](/gaius-docs/images/guides/getting-started/initial-generated-site.png)
+![Initial Generated Site]({{rp}}/images/guides/getting-started/initial-generated-site.png)
 
-Congratulations you're now ready to view our [Authoring Content Guide](/gaius-docs/guides/authoring-content.html) to learn more about creating new content for your site!
+Congratulations you're now ready to view our [Authoring Content Guide]({{rp}}/guides/authoring-content.html) to learn more about creating new content for your site!
