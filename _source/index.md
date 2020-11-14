@@ -29,7 +29,10 @@ The main goals for the Gaius engine are:
 
 The Gaius engine is written 100% in C# (.NET Core), and as such requires the .NET Core Runtime in order to run the site generation process locally.
 
-![Gaius Engine in Action]({{root}}/images/engine.png){.rounded .mx-auto .d-block}
+{.d-block}
+^^^
+![Gaius Engine in Action]({{root}}/images/engine.png){.d-block .mx-auto .figure-img .rounded}
+^^^ Gaius engine in action{.text-center}
 
 ## Gaius CLI Wrapper
 
