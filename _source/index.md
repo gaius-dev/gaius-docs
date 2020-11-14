@@ -8,13 +8,14 @@ description: Gaius Documentation Homepage
 
 # Gaius Platform Introduction
 
-Gaius is an ultra-fast static site generator platform that was inspired by [Jekyll](https://jekyllrb.com/) and various blogging platforms that leveraged Jekyll (e.g. [Octopress](http://octopress.org/)).
+Gaius is an ultra-fast static site generation platform that was inspired by [Jekyll](https://jekyllrb.com/) and various blogging platforms that leveraged Jekyll (e.g. [Octopress](http://octopress.org/)).
 
 The Gaius platform consists of four main components:
-1. Gaius engine, which is responsible for taking source input data and transforming it to HTML.
-1. Gaius CLI, which is responsible for updating the Gaius engine, Github Actions workflows, and the CLI itself.
-1. Gaius Github Actions, which provide some workflows which will automatically generate and deploy your site to Github Pages.
-1. Gaius starter site, which provides an opinionated starter site and template (Bootstrap based) that you can use to build your own sites.
+
+1. [Gaius engine](https://github.com/gaius-dev/gaius-engine/tree/main/src), which is responsible for taking source input data and transforming it to HTML.
+1. [Gaius CLI wrapper](https://github.com/gaius-dev/gaius-engine/tree/main/cli), which is responsible for updating the Gaius engine, Github Actions workflow, and the CLI itself.
+1. [Gaius Github Actions](https://github.com/gaius-dev/gaius-engine/tree/main/github-actions), which provide a workflow which will automatically generate and deploy your site to Github Pages.
+1. [Gaius starter site](https://github.com/gaius-dev/gaius-starter), which provides an opinionated starter site and template (Bootstrap based) that you can use to build your own sites.
 
 ## Gaius Engine
 
@@ -22,17 +23,17 @@ The beating heart of the Gaius platform is the engine.  The engine is responsibl
 
 The main goals for the Gaius engine are:
 
-1. Performance: site generation should be fast and efficient.
-1. Visualization: the user should be able to see exactly what changes will be made to the generated site content when processing the source input files.
-1. Extensibility: currently we only support a single worker (i.e. "Markdown Liquid Worker"), but the engine itself supports "pluggable" workers which can process different types of source input files.
+1. **Performance**: site generation should be fast and efficient.
+1. **Visualization**: the user should be able to see exactly what changes will be made to the generated site content when processing the source input files.
+1. **Extensibility**: currently we only support a single worker (i.e. "Markdown Liquid Worker"), but the engine itself supports "pluggable" workers which can process different types of source input files.
 
 The Gaius engine is written 100% in C# (.NET Core), and as such requires the .NET Core Runtime in order to run the site generation process locally.
 
 ![Gaius Engine in Action]({{root}}/images/engine.png)
 
-## Gaius CLI
+## Gaius CLI Wrapper
 
-The Gaius CLI consists of a shell script (for Linux/OSX/Windows GitBash) and a PowerShell script (for Windows PowerShell).  It provides a simple wrapper around the Gaius engine itself, and most importantly provides an easy mechanism to update the Gaius engine, the Github Actions workflows, and the CLI itself.
+The Gaius CLI consists of a shell script *(for Linux/OSX/Windows GitBash)* and a PowerShell script *(for Windows PowerShell)*.  It provides a simple wrapper around the Gaius engine itself, and most importantly provides an easy mechanism to update the Gaius engine, the Github Actions workflows, and the CLI itself.
 
 ## Gaius Github Actions
 

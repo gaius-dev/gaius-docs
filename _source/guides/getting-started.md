@@ -23,13 +23,13 @@ Getting started with Gaius is a snap!
 Certain software prerequisites must be met in order to use Gaius on your local development environment:
 
 1. Git
-2. .NET Core Runtime/SDK
+1. .NET Core Runtime/SDK
 
-#### Git
+**Git**
 
 In order to work with Gaius you'll need to have git installed. For Linux users, you're smart enough to figure this out :) For Windows users, download and install the [Windows version of Git](https://git-scm.com/download/win).  Gaius is geared towards more technical users and as such will require some knowledge of git (nothing crazy we promise!).
 
-#### .NET Core Runtime/SDK
+**.NET Core Runtime/SDK**
 
 If you would like to generate and test your site locally, you'll need to install the .NET Core runtime.
 
@@ -103,7 +103,7 @@ The Gaius platform has been designed specifically to work with Github Pages, so 
 
 **Important Note: Github has recently switched from `master` being the default branch name for new repositories, to `main`.  As such our Github Actions workflow has been updated to reflect this.  In order for the Gaius Github Actions workflow to function, you must have your default branch set as `main` and maintain all of your source input data in the `main` branch.**
 
-#### User/Organization Site vs. Project Site
+**User/Organization Site vs. Project Site**
 
 There are some key differences between the way you create a repository for a user/organization site vs. a site for a github project. Please consult the official [Github Pages documentation](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/creating-a-github-pages-site) for more information.
 
