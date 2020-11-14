@@ -58,26 +58,26 @@
 
       <!-- Content here -->
       <h1>Gaius Platform Introduction</h1>
-<p>Gaius is an ultra-fast static site generator platform that was inspired by <a href="https://jekyllrb.com/">Jekyll</a> and various blogging platforms that leveraged Jekyll (e.g. <a href="http://octopress.org/">Octopress</a>).</p>
+<p>Gaius is an ultra-fast static site generation platform that was inspired by <a href="https://jekyllrb.com/">Jekyll</a> and various blogging platforms that leveraged Jekyll (e.g. <a href="http://octopress.org/">Octopress</a>).</p>
 <p>The Gaius platform consists of four main components:</p>
 <ol>
-<li>Gaius engine, which is responsible for taking source input data and transforming it to HTML.</li>
-<li>Gaius CLI, which is responsible for updating the Gaius engine, Github Actions workflows, and the CLI itself.</li>
-<li>Gaius Github Actions, which provide some workflows which will automatically generate and deploy your site to Github Pages.</li>
-<li>Gaius starter site, which provides an opinionated starter site and template (Bootstrap based) that you can use to build your own sites.</li>
+<li><a href="https://github.com/gaius-dev/gaius-engine/tree/main/src">Gaius engine</a>, which is responsible for taking source input data and transforming it to HTML.</li>
+<li><a href="https://github.com/gaius-dev/gaius-engine/tree/main/cli">Gaius CLI wrapper</a>, which is responsible for updating the Gaius engine, Github Actions workflow, and the CLI itself.</li>
+<li><a href="https://github.com/gaius-dev/gaius-engine/tree/main/github-actions">Gaius Github Actions</a>, which provide a workflow which will automatically generate and deploy your site to Github Pages.</li>
+<li><a href="https://github.com/gaius-dev/gaius-starter">Gaius starter site</a>, which provides an opinionated starter site and template (Bootstrap based) that you can use to build your own sites.</li>
 </ol>
 <h2>Gaius Engine</h2>
 <p>The beating heart of the Gaius platform is the engine.  The engine is responsible for taking source input data and transforming it to HTML.</p>
 <p>The main goals for the Gaius engine are:</p>
 <ol>
-<li>Performance: site generation should be fast and efficient.</li>
-<li>Visualization: the user should be able to see exactly what changes will be made to the generated site content when processing the source input files.</li>
-<li>Extensibility: currently we only support a single worker (i.e. &quot;Markdown Liquid Worker&quot;), but the engine itself supports &quot;pluggable&quot; workers which can process different types of source input files.</li>
+<li><strong>Performance</strong>: site generation should be fast and efficient.</li>
+<li><strong>Visualization</strong>: the user should be able to see exactly what changes will be made to the generated site content when processing the source input files.</li>
+<li><strong>Extensibility</strong>: currently we only support a single worker (i.e. &quot;Markdown Liquid Worker&quot;), but the engine itself supports &quot;pluggable&quot; workers which can process different types of source input files.</li>
 </ol>
 <p>The Gaius engine is written 100% in C# (.NET Core), and as such requires the .NET Core Runtime in order to run the site generation process locally.</p>
 <p><img src="//gaius-dev.github.io/gaius-docs/images/engine.png" alt="Gaius Engine in Action" /></p>
-<h2>Gaius CLI</h2>
-<p>The Gaius CLI consists of a shell script (for Linux/OSX/Windows GitBash) and a PowerShell script (for Windows PowerShell).  It provides a simple wrapper around the Gaius engine itself, and most importantly provides an easy mechanism to update the Gaius engine, the Github Actions workflows, and the CLI itself.</p>
+<h2>Gaius CLI Wrapper</h2>
+<p>The Gaius CLI consists of a shell script <em>(for Linux/OSX/Windows GitBash)</em> and a PowerShell script <em>(for Windows PowerShell)</em>.  It provides a simple wrapper around the Gaius engine itself, and most importantly provides an easy mechanism to update the Gaius engine, the Github Actions workflows, and the CLI itself.</p>
 <h2>Gaius Github Actions</h2>
 <p>A Gaius Github Actions workflow has been provided to make it extremely easy to deploy your site using Github Pages.  Simply maintain your source input files in the <code>main</code> branch, and the Github Actions workflow will automatically use the Gaius engine to process your source input files, and push the output to the <code>gh-pages</code> branch.  You can also view workflow runs directly in the Github interface, allowing you to easily troubleshoot any site generation issues.</p>
 <p><strong>Important Note: Github has recently switched from <code>master</code> being the default branch name for new repositories, to <code>main</code>.  As such our Github Actions workflow has been updated to reflect this.  In order for the Gaius Github Actions workflow to function, you must have your default branch set as <code>main</code> and maintain all of your source input data in the <code>main</code> branch.</strong></p>

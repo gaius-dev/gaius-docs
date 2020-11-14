@@ -74,9 +74,9 @@
 <li>Git</li>
 <li>.NET Core Runtime/SDK</li>
 </ol>
-<h4>Git</h4>
+<p><strong>Git</strong></p>
 <p>In order to work with Gaius you'll need to have git installed. For Linux users, you're smart enough to figure this out :) For Windows users, download and install the <a href="https://git-scm.com/download/win">Windows version of Git</a>.  Gaius is geared towards more technical users and as such will require some knowledge of git (nothing crazy we promise!).</p>
-<h4>.NET Core Runtime/SDK</h4>
+<p><strong>.NET Core Runtime/SDK</strong></p>
 <p>If you would like to generate and test your site locally, you'll need to install the .NET Core runtime.</p>
 <p><strong>Important Note: Unless you're planning on building the Gaius engine itself (most users will not need to do this), you technically only require the .NET Core Runtime <em>not</em> the SDK.  If you already have the .NET Core SDK installed, that will work fine as well, as it comes with the .NET Core Runtime.</strong></p>
 <p><strong>Important Note: Gaius has been built against the .NET Core 3.1 SDK (3.1.108 to be precise).  Microsoft has recently released .NET 5.0 (the next version of .NET Core), but we have yet to update to that version.  As such please download the latest version of the .NET Core 3.1 Runtime for the time being.</strong></p>
@@ -119,7 +119,7 @@ Gaius CLI wrapper version 0.0.8
 <p>The Gaius platform has been designed specifically to work with Github Pages, so go ahead and create a new repository that will house your site.</p>
 <p><strong>Important Note: The Gaius engine and the CLI are completely agnostic, and it would be quite simple to leverage them for other applications / uses.  We also hope to roll out support for Gitlab in the future as well!</strong></p>
 <p><strong>Important Note: Github has recently switched from <code>master</code> being the default branch name for new repositories, to <code>main</code>.  As such our Github Actions workflow has been updated to reflect this.  In order for the Gaius Github Actions workflow to function, you must have your default branch set as <code>main</code> and maintain all of your source input data in the <code>main</code> branch.</strong></p>
-<h4>User/Organization Site vs. Project Site</h4>
+<p><strong>User/Organization Site vs. Project Site</strong></p>
 <p>There are some key differences between the way you create a repository for a user/organization site vs. a site for a github project. Please consult the official <a href="https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/creating-a-github-pages-site">Github Pages documentation</a> for more information.</p>
 <p>This Guide will assume that you are creating a user site.</p>
 <p><strong>Important Note: When creating a new user based site it's extremely important to name the repository <code>&lt;user&gt;.github.io</code> e.g. <code>rstrube.github.io</code>.</strong></p>
