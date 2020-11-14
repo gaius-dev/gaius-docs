@@ -3,7 +3,7 @@
     <div class="container">
 
         <a class="navbar-brand" href="{{ root }}/">
-            <img src="{{ root }}/images/gaius-logo.png" style="height: 50px;" />
+            <img src="{{ root }}/images/gaius-logo.png" height="50" />
         </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,7 +11,8 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto mr-3">
+
+            <ul class="navbar-nav ml-auto">
 
                 <li class="nav-item {% if pageId == 'index' %} active {% endif %}">
                     <a class="nav-link" href="{{ root }}/">Home 
@@ -21,23 +22,31 @@
                     </a>
                 </li>
 
-                <li class="nav-item {% if pageId == 'guides.getting-started' %} active {% endif %}">
-                    <a class="nav-link" href="{{ root }}/guides/getting-started.html">Getting Started
-                        {% if pageId == 'guides.getting-started' %}
-                            <span class="sr-only">(current)</span>
-                        {% endif %}
+                <!-- dropdown navigation item -->
+                <li class="nav-item dropdown {% if pageId contains 'guides.' %} active {% endif %}">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Guides
                     </a>
-                </li>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 
-                <li class="nav-item {% if pageId == 'guides.authoring-content' %} active {% endif %}">
-                    <a class="nav-link" href="{{ root }}/guides/authoring-content.html">Authoring Content
-                        {% if pageId == 'guides.authoring-content' %}
-                            <span class="sr-only">(current)</span>
-                        {% endif %}
-                    </a>
+                        <a class="dropdown-item {% if pageId == 'guides.getting-started' %} active {% endif %}" href="{{ root }}/guides/getting-started.html">Getting Started
+                            {% if pageId == 'guides.getting-started' %}
+                                <span class="sr-only">(current)</span>
+                            {% endif %}
+                        </a>
+
+                        <a class="dropdown-item {% if pageId == 'guides.authoring-content' %} active {% endif %}" href="{{ root }}/guides/authoring-content.html">Authoring Content
+                            {% if pageId == 'guides.authoring-content' %}
+                                <span class="sr-only">(current)</span>
+                            {% endif %}
+                        </a>
+
+                    </div>
                 </li>
+                <!-- end dropdown navigation item -->
 
             </ul>
+
         </div>
 
     </div>

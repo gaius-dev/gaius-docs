@@ -12,10 +12,10 @@ Gaius is an ultra-fast static site generation platform that was inspired by [Jek
 
 The Gaius platform consists of four main components:
 
-1. [Gaius engine](https://github.com/gaius-dev/gaius-engine/tree/main/src), which is responsible for taking source input data and transforming it to HTML.
-1. [Gaius CLI wrapper](https://github.com/gaius-dev/gaius-engine/tree/main/cli), which is responsible for updating the Gaius engine, Github Actions workflow, and the CLI itself.
-1. [Gaius Github Actions](https://github.com/gaius-dev/gaius-engine/tree/main/github-actions), which provide a workflow which will automatically generate and deploy your site to Github Pages.
-1. [Gaius starter site](https://github.com/gaius-dev/gaius-starter), which provides an opinionated starter site and template (Bootstrap based) that you can use to build your own sites.
+1. [Gaius engine](https://github.com/gaius-dev/gaius-engine/tree/main/src){.badge .badge-primary} : Responsible for taking source input data and transforming it to HTML.
+1. [Gaius CLI wrapper](https://github.com/gaius-dev/gaius-engine/tree/main/cli){.badge .badge-primary} : Responsible for updating the Gaius engine, Github Actions workflow, and the CLI wrapper itself.
+1. [Gaius Github Actions](https://github.com/gaius-dev/gaius-engine/tree/main/github-actions){.badge .badge-primary} : Provides a workflow which will automatically generate and deploy your site to Github Pages.
+1. [Gaius starter site](https://github.com/gaius-dev/gaius-starter){.badge .badge-primary} : Provides an opinionated starter site and template (Bootstrap based) that you can use to build your own sites.
 
 ## Gaius Engine
 
@@ -42,7 +42,11 @@ The Gaius CLI consists of a shell script *(for Linux/OSX/Windows GitBash)* and a
 
 A Gaius Github Actions workflow has been provided to make it extremely easy to deploy your site using Github Pages.  Simply maintain your source input files in the `main` branch, and the Github Actions workflow will automatically use the Gaius engine to process your source input files, and push the output to the `gh-pages` branch.  You can also view workflow runs directly in the Github interface, allowing you to easily troubleshoot any site generation issues.
 
-**Important Note: Github has recently switched from `master` being the default branch name for new repositories, to `main`.  As such our Github Actions workflow has been updated to reflect this.  In order for the Gaius Github Actions workflow to function, you must have your default branch set as `main` and maintain all of your source input data in the `main` branch.**
+:::{.alert .alert-warning}
+**Github default branch change**
+___
+Github has recently switched from `master` being the default branch name for new repositories, to `main`.  As such our Github Actions workflow has been updated to reflect this.  In order for the Gaius Github Actions workflow to function, you must have your default branch set as `main` and maintain all of your source input data in the `main` branch.
+:::
 
 ## Gaius Starter Site
 
@@ -54,4 +58,4 @@ We use the Gaius platform to manage *this* site (the Gaius Documentation site). 
 
 ## Getting Started
 
-Please consult our comprehensive [Getting Started Guide]({{root}}/guides/getting-started.html) to start building a new site using Gaius!
+Please consult our comprehensive [Getting Started Guide]({{root}}/guides/getting-started.html){.badge .badge-primary} to start building a new site using Gaius!

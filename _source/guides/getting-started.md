@@ -24,38 +24,39 @@ Getting started with Gaius is a snap!
 Certain software prerequisites must be met in order to use Gaius on your local development environment:
 
 1. **Git**: In order to work with Gaius you'll need to have git installed. For Linux users, you're smart enough to figure this out :) For Windows users, download and install the [Windows version of Git](https://git-scm.com/download/win).  Gaius is geared towards more technical users and as such will require some knowledge of git (nothing crazy we promise!).
-1. **.NET Core Runtime/SDK**: If you would like to generate and test your site locally, you'll need to install the .NET Core runtime.
+1. **.NET Core Runtime/SDK**: If you would like to generate and test your site locally, you'll need to install the .NET Core runtime.  You can download the [.NET Core 3.1 Runtime/SDK from Microsoft](https://dotnet.microsoft.com/download/dotnet-core/3.1).  
 
-**Important Note: Unless you're planning on building the Gaius engine itself (most users will not need to do this), you technically only require the .NET Core Runtime *not* the SDK.  If you already have the .NET Core SDK installed, that will work fine as well, as it comes with the .NET Core Runtime.**
+:::{.alert .alert-warning}
+**.NET Core Runtime/SDK Considerations**
+___
+Unless you're planning on building the Gaius engine itself (most users will not need to do this), you technically only require the .NET Core Runtime *not* the SDK.  If you already have the .NET Core SDK installed, that will work fine as well, as it comes with the .NET Core Runtime.
+___
+Gaius has been built against the .NET Core 3.1 SDK (3.1.108 to be precise).  Microsoft has recently released .NET 5.0 (the next version of .NET Core), but we have yet to update to that version.  As such please download the latest version of the .NET Core 3.1 Runtime for the time being.
+:::
 
-**Important Note: Gaius has been built against the .NET Core 3.1 SDK (3.1.108 to be precise).  Microsoft has recently released .NET 5.0 (the next version of .NET Core), but we have yet to update to that version.  As such please download the latest version of the .NET Core 3.1 Runtime for the time being.**
+Once you've installed the .NET Core 3.1 Runtime/SDK you should double check that you have it available via the command line.  Open up a terminal and type: `dotnet --version`
 
-You can download the .NET Core 3.1 Runtime/SDK from [Microsoft](https://dotnet.microsoft.com/download/dotnet-core/3.1).
-
-Once you've installed the .NET Core 3.1 Runtime/SDK you should double check that you have it available via the command line.
-
-Open up a terminal and type: `dotnet --version`
-
-**Important Note: for Windows users, you can choose to use either Git Bash, or Powershell, but *not* the default Command Prompt.**
+:::{.alert .alert-warning}
+**Important note regarding Windows users' shell choice**
+___
+For all of the command line steps outlined in this guide you can choose to use *either* **Git Bash**, or **Powershell**, but *not* the default Command Prompt.
+:::
 
 You should see something like:
 
-```
+```shell
 $ dotnet --version
 3.1.108
 ```
-
 If you see the version number displayed, congratulations! You can use the Gaius engine locally to generate a site.
 
 ### 2. Cloning the Starter Site
 
 Open a terminal and navigate to a directory where you'll be cloning the Gaius starter site repository into (e.g. `~/Projects` or `C:\Projects`).
 
-**Important Note: for Windows users, you can choose to use either Git Bash, or Powershell, but *not* the default Command Prompt.**
-
 Now clone the `gaius-starter` repository.  It's recommended that when cloning the repo you provide a new directory name.
 
-```
+```shell
 $ git clone https://github.com/gaius-dev/gaius-starter <site-name>
 # e.g. git clone https://github.com/gaius-dev/gaius-starter rstrube.github.io
 ```
@@ -64,16 +65,20 @@ This will clone the Gaius starter site, which includes the latest Gaius engine b
 
 Now navigate into the newly created repo directory.
 
-```
-cd <site-name>
+```shell
+$ cd <site-name>
 ```
 At this point it probably makes sense to do a sanity check that you have everything up and running OK.  Go ahead and enter either: `./gaius.sh version` (Linux/OSX/Windows Git Bash) or `.\gaius.ps1 version` (Windows Powershell).
 
-**Important Note: moving forward we will always use `./gaius.sh` in our examples.  If you are the Gaius PowerShell CLI, please substitute this command with `.\gaius.ps1`**
+:::{.alert .alert-warning}
+**Note on guide examples**
+___
+moving forward this guide will always use `./gaius.sh` for it's examples.  If you are the Gaius PowerShell CLI, please substitute this command with `.\gaius.ps1`
+:::
 
 You should see something like:
 
-```
+```shell
               _           
    __ _  __ _(_)_   _ ___ 
   / _` |/ _` | | | | / __|
@@ -91,17 +96,27 @@ This displays both the Gaius engine and CLI versions.  They should always be the
 
 The Gaius platform has been designed specifically to work with Github Pages, so go ahead and create a new repository that will house your site.
 
-**Important Note: The Gaius engine and the CLI are completely agnostic, and it would be quite simple to leverage them for other applications / uses.  We also hope to roll out support for Gitlab in the future as well!**
+:::{.alert .alert-warning}
+**Support for Github alternatives**
+___
+The Gaius engine and the CLI are completely agnostic, and it would be quite simple to leverage them for other applications / uses.  We also hope to roll out support for Gitlab in the future as well!
+:::
 
-**Important Note: Github has recently switched from `master` being the default branch name for new repositories, to `main`.  As such our Github Actions workflow has been updated to reflect this.  In order for the Gaius Github Actions workflow to function, you must have your default branch set as `main` and maintain all of your source input data in the `main` branch.**
+:::{.alert .alert-warning}
+**Github default branch change**
+___
+Github has recently switched from `master` being the default branch name for new repositories, to `main`.  As such our Github Actions workflow has been updated to reflect this.  In order for the Gaius Github Actions workflow to function, you must have your default branch set as `main` and maintain all of your source input data in the `main` branch.
+:::
 
-**User/Organization Site vs. Project Site**
-
-There are some key differences between the way you create a repository for a user/organization site vs. a site for a github project. Please consult the official [Github Pages documentation](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/creating-a-github-pages-site) for more information.
-
+:::{.alert .alert-warning}
+**Github Pages user/org sites vs. project sites**
+___
+There are some key differences between the way you create a repository for a user/organization site vs. a project site. Please consult the official [Github Pages documentation](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/creating-a-github-pages-site) for more information.
+___
 This Guide will assume that you are creating a user site.
 
-**Important Note: When creating a new user based site it's extremely important to name the repository `<user>.github.io` e.g. `rstrube.github.io`.**
+When creating a new user based site it's extremely important to name the repository `<user>.github.io` e.g. `rstrube.github.io`.
+:::
 
 {.d-block}
 ^^^
@@ -112,14 +127,14 @@ This Guide will assume that you are creating a user site.
 
 The cloned `gaius-starter` repo is still pointing to an `origin` that is associated with `https://github.com/gaius-dev/gaius-starter`.  In fact if you run `git remote -v` you'll see the following:
 
-```
+```shell
 $ git remote -v 
 origin  https://github.com/gaius-dev/gaius-starter (fetch)
 origin  https://github.com/gaius-dev/gaius-starter (push)
 ```
 You'll now need to delete the existing `origin` remote and replace it with a new `origin` remote that points to your new repository.
 
-```
+```shell
 # Remove existing origin remote
 $ git remote rm origin
 
@@ -138,13 +153,18 @@ $ git remote -v
 
 The main configuration file for the Gaius engine is `gaius.json`.  Open it and look for the `GenerationRootPrefix` setting.  It should currently be set to `//gaius-dev.github.io/gaius-starter`.  You need to update this value to the URL that will be used to access your Github Pages site.  Here is an example `gaius.json` file that is used for my Github Pages user site [https://rstrube.github.io].
 
-```
+{.bg-light}
+```json
 {
     "Worker" : "Gaius.Core.Worker.MarkdownLiquid.MarkdownLiquidWorker",
-    "GenerationRootPrefix" : "//rstrube.github.io"
+    "GenerationUrlRootPrefix" : "//rstrube.github.io"
 }
 ```
-**Important Note: It's recommened that you omit the protocol (e.g. `http://`, `https://`) and instead just use `//`.  This tells the browser to use whatever protocol is currently active.**
+:::{.alert .alert-warning}
+**Protocol agnostic GenerationUrlRootPrefix**
+___
+It's recommened that you omit the protocol (e.g. `http://`, `https://`) and instead just use `//`.  This tells the browser to use whatever protocol is currently active.
+:::
 
 ### 6. Initial Commit
 
@@ -152,7 +172,8 @@ Gaius behaves differently than some other static site generation platforms in th
 
 For now go ahead and make your initial commit:
 
-```
+{.bg-light}
+```shell
 $ git add .
 $ git commit -m "Initial commit"
 $ git push -u origin main
@@ -193,4 +214,4 @@ You should now be able to navigate to: `https://<user>.github.io` to view your g
 ![Initial generated site]({{root}}/images/guides/getting-started/initial-generated-site.png){.img-thumbnail .mx-auto .d-block}
 ^^^ Initial generated site{.text-center}
 
-Congratulations you're now ready to view our [Authoring Content Guide]({{root}}/guides/authoring-content.html) to learn more about creating new content for your site!
+Congratulations you're now ready to view our [Authoring Content Guide]({{root}}/guides/authoring-content.html){.badge .badge-primary} to learn more about creating new content for your site!
