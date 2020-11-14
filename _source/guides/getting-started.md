@@ -22,16 +22,8 @@ Getting started with Gaius is a snap!
 
 Certain software prerequisites must be met in order to use Gaius on your local development environment:
 
-1. Git
-1. .NET Core Runtime/SDK
-
-**Git**
-
-In order to work with Gaius you'll need to have git installed. For Linux users, you're smart enough to figure this out :) For Windows users, download and install the [Windows version of Git](https://git-scm.com/download/win).  Gaius is geared towards more technical users and as such will require some knowledge of git (nothing crazy we promise!).
-
-**.NET Core Runtime/SDK**
-
-If you would like to generate and test your site locally, you'll need to install the .NET Core runtime.
+1. **Git**: In order to work with Gaius you'll need to have git installed. For Linux users, you're smart enough to figure this out :) For Windows users, download and install the [Windows version of Git](https://git-scm.com/download/win).  Gaius is geared towards more technical users and as such will require some knowledge of git (nothing crazy we promise!).
+1. **.NET Core Runtime/SDK**: If you would like to generate and test your site locally, you'll need to install the .NET Core runtime.
 
 **Important Note: Unless you're planning on building the Gaius engine itself (most users will not need to do this), you technically only require the .NET Core Runtime *not* the SDK.  If you already have the .NET Core SDK installed, that will work fine as well, as it comes with the .NET Core Runtime.**
 
