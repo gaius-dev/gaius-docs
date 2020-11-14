@@ -73,16 +73,15 @@ At this point it probably makes sense to do a sanity check that you have everyth
 You should see something like:
 
 ```
-$ ./gaius.sh
-   ____       _           
-  / ___| __ _(_)_   _ ___ 
- | |  _ / _` | | | | / __|
- | |_| | (_| | | |_| \__ \
-  \____|\__,_|_|\__,_|___/
-                          
+              _           
+   __ _  __ _(_)_   _ ___ 
+  / _` |/ _` | | | | / __|
+ | (_| | (_| | | |_| \__ \
+  \__, |\__,_|_|\__,_|___/
+  |___/                   
 
-Gaius 0.0.8
-Gaius CLI wrapper version 0.0.8
+Gaius 0.0.12
+Gaius CLI wrapper version 0.0.12
 ```
 
 This displays both the Gaius engine and CLI versions.  They should always be the same (unless you're doing something very specialized like beta testing a new version of our engine/CLI).
