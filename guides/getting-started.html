@@ -12,6 +12,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.3.2/build/styles/default.min.css">
 
     <title>Gaius Getting Started Guide</title>
 </head>
@@ -22,7 +24,7 @@
     <div class="container">
 
         <a class="navbar-brand" href="//gaius-dev.github.io/gaius-docs/">
-            <img src="//gaius-dev.github.io/gaius-docs/images/gaius-logo.png" style="height: 50px;" />
+            <img src="//gaius-dev.github.io/gaius-docs/images/gaius-logo.png" height="50" />
         </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,25 +32,34 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto mr-3">
+
+            <ul class="navbar-nav ml-auto">
 
                 <li class="nav-item ">
                     <a class="nav-link" href="//gaius-dev.github.io/gaius-docs/">Home 
                     </a>
                 </li>
 
-                <li class="nav-item  active ">
-                    <a class="nav-link" href="//gaius-dev.github.io/gaius-docs/guides/getting-started.html">Getting Started
-                            <span class="sr-only">(current)</span>
+                <!-- dropdown navigation item -->
+                <li class="nav-item dropdown  active ">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Guides
                     </a>
-                </li>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 
-                <li class="nav-item ">
-                    <a class="nav-link" href="//gaius-dev.github.io/gaius-docs/guides/authoring-content.html">Authoring Content
-                    </a>
+                        <a class="dropdown-item  active " href="//gaius-dev.github.io/gaius-docs/guides/getting-started.html">Getting Started
+                                <span class="sr-only">(current)</span>
+                        </a>
+
+                        <a class="dropdown-item " href="//gaius-dev.github.io/gaius-docs/guides/authoring-content.html">Authoring Content
+                        </a>
+
+                    </div>
                 </li>
+                <!-- end dropdown navigation item -->
 
             </ul>
+
         </div>
 
     </div>
@@ -73,34 +84,41 @@
 <p>Certain software prerequisites must be met in order to use Gaius on your local development environment:</p>
 <ol>
 <li><strong>Git</strong>: In order to work with Gaius you'll need to have git installed. For Linux users, you're smart enough to figure this out :) For Windows users, download and install the <a href="https://git-scm.com/download/win">Windows version of Git</a>.  Gaius is geared towards more technical users and as such will require some knowledge of git (nothing crazy we promise!).</li>
-<li><strong>.NET Core Runtime/SDK</strong>: If you would like to generate and test your site locally, you'll need to install the .NET Core runtime.</li>
+<li><strong>.NET Core Runtime/SDK</strong>: If you would like to generate and test your site locally, you'll need to install the .NET Core runtime.  You can download the <a href="https://dotnet.microsoft.com/download/dotnet-core/3.1">.NET Core 3.1 Runtime/SDK from Microsoft</a>.</li>
 </ol>
-<p><strong>Important Note: Unless you're planning on building the Gaius engine itself (most users will not need to do this), you technically only require the .NET Core Runtime <em>not</em> the SDK.  If you already have the .NET Core SDK installed, that will work fine as well, as it comes with the .NET Core Runtime.</strong></p>
-<p><strong>Important Note: Gaius has been built against the .NET Core 3.1 SDK (3.1.108 to be precise).  Microsoft has recently released .NET 5.0 (the next version of .NET Core), but we have yet to update to that version.  As such please download the latest version of the .NET Core 3.1 Runtime for the time being.</strong></p>
-<p>You can download the .NET Core 3.1 Runtime/SDK from <a href="https://dotnet.microsoft.com/download/dotnet-core/3.1">Microsoft</a>.</p>
-<p>Once you've installed the .NET Core 3.1 Runtime/SDK you should double check that you have it available via the command line.</p>
-<p>Open up a terminal and type: <code>dotnet --version</code></p>
-<p><strong>Important Note: for Windows users, you can choose to use either Git Bash, or Powershell, but <em>not</em> the default Command Prompt.</strong></p>
+<div class="alert alert-warning"><p><strong>.NET Core Runtime/SDK Considerations</strong></p>
+<hr />
+<p>Unless you're planning on building the Gaius engine itself (most users will not need to do this), you technically only require the .NET Core Runtime <em>not</em> the SDK.  If you already have the .NET Core SDK installed, that will work fine as well, as it comes with the .NET Core Runtime.</p>
+<hr />
+<p>Gaius has been built against the .NET Core 3.1 SDK (3.1.108 to be precise).  Microsoft has recently released .NET 5.0 (the next version of .NET Core), but we have yet to update to that version.  As such please download the latest version of the .NET Core 3.1 Runtime for the time being.</p>
+</div>
+<p>Once you've installed the .NET Core 3.1 Runtime/SDK you should double check that you have it available via the command line.  Open up a terminal and type: <code>dotnet --version</code></p>
+<div class="alert alert-warning"><p><strong>Important note regarding Windows users' shell choice</strong></p>
+<hr />
+<p>For all of the command line steps outlined in this guide you can choose to use <em>either</em> <strong>Git Bash</strong>, or <strong>Powershell</strong>, but <em>not</em> the default Command Prompt.</p>
+</div>
 <p>You should see something like:</p>
-<pre><code>$ dotnet --version
+<pre><code class="language-shell">$ dotnet --version
 3.1.108
 </code></pre>
 <p>If you see the version number displayed, congratulations! You can use the Gaius engine locally to generate a site.</p>
 <h3>2. Cloning the Starter Site</h3>
 <p>Open a terminal and navigate to a directory where you'll be cloning the Gaius starter site repository into (e.g. <code>~/Projects</code> or <code>C:\Projects</code>).</p>
-<p><strong>Important Note: for Windows users, you can choose to use either Git Bash, or Powershell, but <em>not</em> the default Command Prompt.</strong></p>
 <p>Now clone the <code>gaius-starter</code> repository.  It's recommended that when cloning the repo you provide a new directory name.</p>
-<pre><code>$ git clone https://github.com/gaius-dev/gaius-starter &lt;site-name&gt;
+<pre><code class="language-shell">$ git clone https://github.com/gaius-dev/gaius-starter &lt;site-name&gt;
 # e.g. git clone https://github.com/gaius-dev/gaius-starter rstrube.github.io
 </code></pre>
 <p>This will clone the Gaius starter site, which includes the latest Gaius engine binaries, Github Actions, and CLI.</p>
 <p>Now navigate into the newly created repo directory.</p>
-<pre><code>cd &lt;site-name&gt;
+<pre><code class="language-shell">$ cd &lt;site-name&gt;
 </code></pre>
 <p>At this point it probably makes sense to do a sanity check that you have everything up and running OK.  Go ahead and enter either: <code>./gaius.sh version</code> (Linux/OSX/Windows Git Bash) or <code>.\gaius.ps1 version</code> (Windows Powershell).</p>
-<p><strong>Important Note: moving forward we will always use <code>./gaius.sh</code> in our examples.  If you are the Gaius PowerShell CLI, please substitute this command with <code>.\gaius.ps1</code></strong></p>
+<div class="alert alert-warning"><p><strong>Note on guide examples</strong></p>
+<hr />
+<p>moving forward this guide will always use <code>./gaius.sh</code> for it's examples.  If you are the Gaius PowerShell CLI, please substitute this command with <code>.\gaius.ps1</code></p>
+</div>
 <p>You should see something like:</p>
-<pre><code>              _           
+<pre><code class="language-shell">              _           
    __ _  __ _(_)_   _ ___ 
   / _` |/ _` | | | | / __|
  | (_| | (_| | | |_| \__ \
@@ -113,24 +131,33 @@ Gaius CLI wrapper version 0.0.14
 <p>This displays both the Gaius engine and CLI versions.  They should always be the same (unless you're doing something very specialized like beta testing a new version of our engine/CLI).</p>
 <h3>3. Creating a new Github Repo</h3>
 <p>The Gaius platform has been designed specifically to work with Github Pages, so go ahead and create a new repository that will house your site.</p>
-<p><strong>Important Note: The Gaius engine and the CLI are completely agnostic, and it would be quite simple to leverage them for other applications / uses.  We also hope to roll out support for Gitlab in the future as well!</strong></p>
-<p><strong>Important Note: Github has recently switched from <code>master</code> being the default branch name for new repositories, to <code>main</code>.  As such our Github Actions workflow has been updated to reflect this.  In order for the Gaius Github Actions workflow to function, you must have your default branch set as <code>main</code> and maintain all of your source input data in the <code>main</code> branch.</strong></p>
-<p><strong>User/Organization Site vs. Project Site</strong></p>
-<p>There are some key differences between the way you create a repository for a user/organization site vs. a site for a github project. Please consult the official <a href="https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/creating-a-github-pages-site">Github Pages documentation</a> for more information.</p>
+<div class="alert alert-warning"><p><strong>Support for Github alternatives</strong></p>
+<hr />
+<p>The Gaius engine and the CLI are completely agnostic, and it would be quite simple to leverage them for other applications / uses.  We also hope to roll out support for Gitlab in the future as well!</p>
+</div>
+<div class="alert alert-warning"><p><strong>Github default branch change</strong></p>
+<hr />
+<p>Github has recently switched from <code>master</code> being the default branch name for new repositories, to <code>main</code>.  As such our Github Actions workflow has been updated to reflect this.  In order for the Gaius Github Actions workflow to function, you must have your default branch set as <code>main</code> and maintain all of your source input data in the <code>main</code> branch.</p>
+</div>
+<div class="alert alert-warning"><p><strong>Github Pages user/org sites vs. project sites</strong></p>
+<hr />
+<p>There are some key differences between the way you create a repository for a user/organization site vs. a project site. Please consult the official <a href="https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/creating-a-github-pages-site">Github Pages documentation</a> for more information.</p>
+<hr />
 <p>This Guide will assume that you are creating a user site.</p>
-<p><strong>Important Note: When creating a new user based site it's extremely important to name the repository <code>&lt;user&gt;.github.io</code> e.g. <code>rstrube.github.io</code>.</strong></p>
+<p>When creating a new user based site it's extremely important to name the repository <code>&lt;user&gt;.github.io</code> e.g. <code>rstrube.github.io</code>.</p>
+</div>
 <figure class="d-block figure">
 <p><img src="//gaius-dev.github.io/gaius-docs/images/guides/getting-started/new-repo.png" class="img-thumbnail mx-auto d-block img-fluid" alt="Creating a new repository" /></p>
 <figcaption class="text-center figure-caption">Creating a new repository</figcaption>
 </figure>
 <h3>4. Updating Remotes</h3>
 <p>The cloned <code>gaius-starter</code> repo is still pointing to an <code>origin</code> that is associated with <code>https://github.com/gaius-dev/gaius-starter</code>.  In fact if you run <code>git remote -v</code> you'll see the following:</p>
-<pre><code>$ git remote -v 
+<pre><code class="language-shell">$ git remote -v 
 origin  https://github.com/gaius-dev/gaius-starter (fetch)
 origin  https://github.com/gaius-dev/gaius-starter (push)
 </code></pre>
 <p>You'll now need to delete the existing <code>origin</code> remote and replace it with a new <code>origin</code> remote that points to your new repository.</p>
-<pre><code># Remove existing origin remote
+<pre><code class="language-shell"># Remove existing origin remote
 $ git remote rm origin
 
 # Confirm that you no longer have any remotes
@@ -145,16 +172,19 @@ $ git remote -v
 </code></pre>
 <h3>5. Configure Gaius.json</h3>
 <p>The main configuration file for the Gaius engine is <code>gaius.json</code>.  Open it and look for the <code>GenerationRootPrefix</code> setting.  It should currently be set to <code>//gaius-dev.github.io/gaius-starter</code>.  You need to update this value to the URL that will be used to access your Github Pages site.  Here is an example <code>gaius.json</code> file that is used for my Github Pages user site [https://rstrube.github.io].</p>
-<pre><code>{
+<pre><code class="language-json bg-light">{
     &quot;Worker&quot; : &quot;Gaius.Core.Worker.MarkdownLiquid.MarkdownLiquidWorker&quot;,
-    &quot;GenerationRootPrefix&quot; : &quot;//rstrube.github.io&quot;
+    &quot;GenerationUrlRootPrefix&quot; : &quot;//rstrube.github.io&quot;
 }
 </code></pre>
-<p><strong>Important Note: It's recommened that you omit the protocol (e.g. <code>http://</code>, <code>https://</code>) and instead just use <code>//</code>.  This tells the browser to use whatever protocol is currently active.</strong></p>
+<div class="alert alert-warning"><p><strong>Protocol agnostic GenerationUrlRootPrefix</strong></p>
+<hr />
+<p>It's recommened that you omit the protocol (e.g. <code>http://</code>, <code>https://</code>) and instead just use <code>//</code>.  This tells the browser to use whatever protocol is currently active.</p>
+</div>
 <h3>6. Initial Commit</h3>
 <p>Gaius behaves differently than some other static site generation platforms in that you don't actually need to commit the generated assets.  The Github Actions workflow that comes with Gaius will automatically trigger and generate your site assets whenever you commit source data to the <code>main</code> branch.  These generated assets will then be committed <em>automatically</em> to the <code>gh-pages</code> branch (assuming there is no error generating site).The <code>gh-pages</code> branch is used by default by Github Pages.</p>
 <p>For now go ahead and make your initial commit:</p>
-<pre><code>$ git add .
+<pre><code class="language-shell bg-light">$ git add .
 $ git commit -m &quot;Initial commit&quot;
 $ git push -u origin main
 </code></pre>
@@ -182,7 +212,7 @@ $ git push -u origin main
 <p><img src="//gaius-dev.github.io/gaius-docs/images/guides/getting-started/initial-generated-site.png" class="img-thumbnail mx-auto d-block img-fluid" alt="Initial generated site" /></p>
 <figcaption class="text-center figure-caption">Initial generated site</figcaption>
 </figure>
-<p>Congratulations you're now ready to view our <a href="//gaius-dev.github.io/gaius-docs/guides/authoring-content.html">Authoring Content Guide</a> to learn more about creating new content for your site!</p>
+<p>Congratulations you're now ready to view our <a href="//gaius-dev.github.io/gaius-docs/guides/authoring-content.html" class="badge badge-primary">Authoring Content Guide</a> to learn more about creating new content for your site!</p>
 
 
     </div>
@@ -190,15 +220,14 @@ $ git push -u origin main
 <footer class="text-muted bg-light border-top border-bottom">
 
   <div class="container pt-4 pb-3">
-
     <p class="float-right">
       <a href="#">Back to top</a>
     </p>
     <p>Gaius <code>default</code> theme is built on © Bootstrap.</p>
     <p>New to Bootstrap? <a href="https://getbootstrap.com/">Visit the homepage</a> or read our <a href="/docs/4.4/getting-started/introduction/">getting started guide</a>.</p>
-  
-  </div>
 
+  </div>
+  
 </footer>
 
 <!-- Optional JavaScript -->
@@ -206,5 +235,8 @@ $ git push -u origin main
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+<!-- highlight.js -->
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.3.2/build/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

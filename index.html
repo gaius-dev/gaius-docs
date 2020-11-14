@@ -12,6 +12,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.3.2/build/styles/default.min.css">
 
     <title>Gaius Documentation Homepage</title>
 </head>
@@ -22,7 +24,7 @@
     <div class="container">
 
         <a class="navbar-brand" href="//gaius-dev.github.io/gaius-docs/">
-            <img src="//gaius-dev.github.io/gaius-docs/images/gaius-logo.png" style="height: 50px;" />
+            <img src="//gaius-dev.github.io/gaius-docs/images/gaius-logo.png" height="50" />
         </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,7 +32,8 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto mr-3">
+
+            <ul class="navbar-nav ml-auto">
 
                 <li class="nav-item  active ">
                     <a class="nav-link" href="//gaius-dev.github.io/gaius-docs/">Home 
@@ -38,17 +41,25 @@
                     </a>
                 </li>
 
-                <li class="nav-item ">
-                    <a class="nav-link" href="//gaius-dev.github.io/gaius-docs/guides/getting-started.html">Getting Started
+                <!-- dropdown navigation item -->
+                <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Guides
                     </a>
-                </li>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 
-                <li class="nav-item ">
-                    <a class="nav-link" href="//gaius-dev.github.io/gaius-docs/guides/authoring-content.html">Authoring Content
-                    </a>
+                        <a class="dropdown-item " href="//gaius-dev.github.io/gaius-docs/guides/getting-started.html">Getting Started
+                        </a>
+
+                        <a class="dropdown-item " href="//gaius-dev.github.io/gaius-docs/guides/authoring-content.html">Authoring Content
+                        </a>
+
+                    </div>
                 </li>
+                <!-- end dropdown navigation item -->
 
             </ul>
+
         </div>
 
     </div>
@@ -61,10 +72,10 @@
 <p>Gaius is an ultra-fast static site generation platform that was inspired by <a href="https://jekyllrb.com/">Jekyll</a> and various blogging platforms that leveraged Jekyll (e.g. <a href="http://octopress.org/">Octopress</a>).</p>
 <p>The Gaius platform consists of four main components:</p>
 <ol>
-<li><a href="https://github.com/gaius-dev/gaius-engine/tree/main/src">Gaius engine</a>, which is responsible for taking source input data and transforming it to HTML.</li>
-<li><a href="https://github.com/gaius-dev/gaius-engine/tree/main/cli">Gaius CLI wrapper</a>, which is responsible for updating the Gaius engine, Github Actions workflow, and the CLI itself.</li>
-<li><a href="https://github.com/gaius-dev/gaius-engine/tree/main/github-actions">Gaius Github Actions</a>, which provide a workflow which will automatically generate and deploy your site to Github Pages.</li>
-<li><a href="https://github.com/gaius-dev/gaius-starter">Gaius starter site</a>, which provides an opinionated starter site and template (Bootstrap based) that you can use to build your own sites.</li>
+<li><a href="https://github.com/gaius-dev/gaius-engine/tree/main/src" class="badge badge-primary">Gaius engine</a> : Responsible for taking source input data and transforming it to HTML.</li>
+<li><a href="https://github.com/gaius-dev/gaius-engine/tree/main/cli" class="badge badge-primary">Gaius CLI wrapper</a> : Responsible for updating the Gaius engine, Github Actions workflow, and the CLI wrapper itself.</li>
+<li><a href="https://github.com/gaius-dev/gaius-engine/tree/main/github-actions" class="badge badge-primary">Gaius Github Actions</a> : Provides a workflow which will automatically generate and deploy your site to Github Pages.</li>
+<li><a href="https://github.com/gaius-dev/gaius-starter" class="badge badge-primary">Gaius starter site</a> : Provides an opinionated starter site and template (Bootstrap based) that you can use to build your own sites.</li>
 </ol>
 <h2>Gaius Engine</h2>
 <p>The beating heart of the Gaius platform is the engine.  The engine is responsible for taking source input data and transforming it to HTML.</p>
@@ -83,13 +94,16 @@
 <p>The Gaius CLI consists of a shell script <em>(for Linux/OSX/Windows GitBash)</em> and a PowerShell script <em>(for Windows PowerShell)</em>.  It provides a simple wrapper around the Gaius engine itself, and most importantly provides an easy mechanism to update the Gaius engine, the Github Actions workflows, and the CLI itself.</p>
 <h2>Gaius Github Actions</h2>
 <p>A Gaius Github Actions workflow has been provided to make it extremely easy to deploy your site using Github Pages.  Simply maintain your source input files in the <code>main</code> branch, and the Github Actions workflow will automatically use the Gaius engine to process your source input files, and push the output to the <code>gh-pages</code> branch.  You can also view workflow runs directly in the Github interface, allowing you to easily troubleshoot any site generation issues.</p>
-<p><strong>Important Note: Github has recently switched from <code>master</code> being the default branch name for new repositories, to <code>main</code>.  As such our Github Actions workflow has been updated to reflect this.  In order for the Gaius Github Actions workflow to function, you must have your default branch set as <code>main</code> and maintain all of your source input data in the <code>main</code> branch.</strong></p>
+<div class="alert alert-warning"><p><strong>Github default branch change</strong></p>
+<hr />
+<p>Github has recently switched from <code>master</code> being the default branch name for new repositories, to <code>main</code>.  As such our Github Actions workflow has been updated to reflect this.  In order for the Gaius Github Actions workflow to function, you must have your default branch set as <code>main</code> and maintain all of your source input data in the <code>main</code> branch.</p>
+</div>
 <h2>Gaius Starter Site</h2>
 <p>The Gaius Starter Site provides a template (based on Bootstrap) and some starter source input files that you can use as a launching-off point to create your own sites.</p>
 <h2>Eating our Own Dog Food!</h2>
 <p>We use the Gaius platform to manage <em>this</em> site (the Gaius Documentation site).  This provides us with an excellent way to test and ehnance the platform and ensure that it continues to work smoothly.</p>
 <h2>Getting Started</h2>
-<p>Please consult our comprehensive <a href="//gaius-dev.github.io/gaius-docs/guides/getting-started.html">Getting Started Guide</a> to start building a new site using Gaius!</p>
+<p>Please consult our comprehensive <a href="//gaius-dev.github.io/gaius-docs/guides/getting-started.html" class="badge badge-primary">Getting Started Guide</a> to start building a new site using Gaius!</p>
 
 
     </div>
@@ -97,15 +111,14 @@
 <footer class="text-muted bg-light border-top border-bottom">
 
   <div class="container pt-4 pb-3">
-
     <p class="float-right">
       <a href="#">Back to top</a>
     </p>
     <p>Gaius <code>default</code> theme is built on © Bootstrap.</p>
     <p>New to Bootstrap? <a href="https://getbootstrap.com/">Visit the homepage</a> or read our <a href="/docs/4.4/getting-started/introduction/">getting started guide</a>.</p>
-  
-  </div>
 
+  </div>
+  
 </footer>
 
 <!-- Optional JavaScript -->
@@ -113,5 +126,8 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+<!-- highlight.js -->
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.3.2/build/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>
