@@ -6,7 +6,7 @@ keywords: Gaius, Documentation, Static Site Generator
 description: Gaius Documentation Homepage
 ...
 
-# Gaius Platform Introduction
+# Gaius Static Site Generation Platform
 
 Gaius is an ultra-fast static site generation platform that was inspired by [Jekyll](https://jekyllrb.com/) and various blogging platforms that leveraged Jekyll (e.g. [Octopress](http://octopress.org/)).
 
@@ -59,3 +59,31 @@ We use the Gaius platform to manage *this* site (the Gaius Documentation site). 
 ## Getting Started
 
 Please consult our comprehensive [Getting Started Guide]({{root}}/guides/getting-started.html){.badge .badge-primary} to start building a new site using Gaius!
+
+## Acknowledgements
+
+The Gaius platform would not be possible without some incredible open-source projects.  The Gaius engine leverages the following libraries:
+
+:::{.row}
+{.col-md-2 .text-center}
+![Markdig logo]({{root}}/images/markdig-logo.png){style="height:90px"}
+
+{.col}
+[Markdig](https://github.com/lunet-io/markdig/) is an incredible open-source markdown processing engine for .NET.  It also provides numerous extensions that can enhance the capabilities of the source markdown data.
+:::
+
+:::{.row}
+{.col-md-2 .text-center}
+![Fluid logo]({{root}}/images/fluid-logo.png){style="height:90px"}
+
+{.col}
+[Fulid](https://github.com/sebastienros/fluid) is an open-source .NET template engine that is as close as possible to the Liquid template language.
+:::
+
+:::{.row .align-items-center .pt-1} 
+{.col-md-2 .text-center}
+##### YamlDotNet
+
+{.col}
+[YamlDotNet](https://github.com/aaubry/YamlDotNet) is an excellent .NET based library for processing YAML.
+:::
