@@ -1,4 +1,14 @@
 {
-    "Worker" : "Gaius.Core.Worker.MarkdownLiquid.MarkdownLiquidWorker",
-    "GenerationUrlRootPrefix" : "//gaius-dev.github.io/gaius-docs"
+    "Logging": {
+        "LogLevel": {
+            "Default": "Information",
+            "Microsoft": "Warning",
+            "Microsoft.Hosting.Lifetime": "Information"
+        }
+    },
+    "AllowedHosts": "*",
+    "GaiusEngine": {
+        "Worker": "Gaius.Core.Worker.MarkdownLiquid.MarkdownLiquidWorker",
+        "GenerationUrlRootPrefix": "//gaius-dev.github.io/gaius-docs"
+    }
 }

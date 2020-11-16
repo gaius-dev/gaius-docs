@@ -86,8 +86,9 @@ You should see something like:
   \__, |\__,_|_|\__,_|___/
   |___/                   
 
-Gaius 0.0.14
-Gaius CLI wrapper version 0.0.14
+Gaius Engine 0.0.20
+Gaius Server 0.0.20
+Gaius CLI wrapper version 0.0.20
 ```
 
 This displays both the Gaius engine and CLI versions.  They should always be the same (unless you're doing something very specialized like beta testing a new version of our engine/CLI).
@@ -156,8 +157,18 @@ The main configuration file for the Gaius engine is `gaius.json`.  Open it and l
 {.bg-light}
 ```json
 {
-    "Worker" : "Gaius.Core.Worker.MarkdownLiquid.MarkdownLiquidWorker",
-    "GenerationUrlRootPrefix" : "//rstrube.github.io"
+    "Logging": {
+        "LogLevel": {
+            "Default": "Information",
+            "Microsoft": "Warning",
+            "Microsoft.Hosting.Lifetime": "Information"
+        }
+    },
+    "AllowedHosts": "*",
+    "GaiusEngine": {
+        "Worker": "Gaius.Core.Worker.MarkdownLiquid.MarkdownLiquidWorker",
+        "GenerationUrlRootPrefix": "//gaius-dev.github.io/gaius-starter"
+    }
 }
 ```
 :::{.alert .alert-warning}
