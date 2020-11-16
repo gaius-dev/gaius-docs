@@ -10,9 +10,10 @@ description: Gaius Documentation Homepage
 
 Gaius is an ultra-fast static site generation platform that was inspired by [Jekyll](https://jekyllrb.com/) and various blogging platforms that leveraged Jekyll (e.g. [Octopress](http://octopress.org/)).
 
-The Gaius platform consists of four main components:
+The Gaius platform consists of the following components:
 
 1. [Gaius engine](https://github.com/gaius-dev/gaius-engine/tree/main/src){.badge .badge-primary} : Responsible for taking source input data and transforming it to HTML.
+1. [Gaius server](https://github.com/gaius-dev/gaius-engine/tree/main/src/GaiusServer){.badge .badge-primary} : A Kestrel based micro-server for testing generated sites locally.
 1. [Gaius CLI wrapper](https://github.com/gaius-dev/gaius-engine/tree/main/cli){.badge .badge-primary} : Responsible for updating the Gaius engine, Github Actions workflow, and the CLI wrapper itself.
 1. [Gaius Github Actions](https://github.com/gaius-dev/gaius-engine/tree/main/github-actions){.badge .badge-primary} : Provides a workflow which will automatically generate and deploy your site to Github Pages.
 1. [Gaius starter site](https://github.com/gaius-dev/gaius-starter){.badge .badge-primary} : Provides an opinionated starter site and template (Bootstrap based) that you can use to build your own sites.
@@ -31,8 +32,17 @@ The Gaius engine is written 100% in C# (.NET Core), and as such requires the .NE
 
 {.d-block}
 ^^^
-![Gaius Engine in Action]({{root}}/images/engine.png){.d-block .mx-auto .figure-img .rounded}
+![Gaius engine in action]({{root}}/images/engine.png){.d-block .mx-auto .figure-img .rounded}
 ^^^ Gaius engine in action{.text-center}
+
+## Gaius Server
+
+The Gaius Server is a [Kestrel](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel) based micro-server that can be used to test out your generated site locally.  By default it runs on `http://localhost:5000`.
+
+{.d-block}
+^^^
+![Gaius server running]({{root}}/images/gaius-server.png){.d-block .mx-auto .figure-img .rounded}
+^^^ Gaius server running to test generated site locally{.text-center}
 
 ## Gaius CLI Wrapper
 
