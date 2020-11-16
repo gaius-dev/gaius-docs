@@ -90,7 +90,7 @@ The Gaius platform would not be possible without some incredible open-source pro
 [Fulid](https://github.com/sebastienros/fluid) is an open-source .NET template engine that is as close as possible to the Liquid template language.
 :::
 
-:::{.row .align-items-center .pt-1} 
+:::{.row .pt-3} 
 {.col-md-2 .text-center}
 ##### YamlDotNet
 
