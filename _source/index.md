@@ -32,7 +32,7 @@ The Gaius engine is written 100% in C# (.NET Core), and as such requires the .NE
 
 {.d-block}
 ^^^
-![Gaius engine in action]({{root}}/images/engine.png){.d-block .mx-auto .figure-img .rounded}
+![Gaius engine in action]({{root}}/images/engine.png){.rounded .mx-auto .d-block}
 ^^^ Gaius engine in action{.text-center}
 
 ## Gaius Server
@@ -41,7 +41,7 @@ The Gaius Server is a [Kestrel](https://docs.microsoft.com/en-us/aspnet/core/fun
 
 {.d-block}
 ^^^
-![Gaius server running]({{root}}/images/gaius-server.png){.d-block .mx-auto .figure-img .rounded}
+![Gaius server running]({{root}}/images/gaius-server.png){.img-thumbnail .d-block .mx-auto}
 ^^^ Gaius server running to test generated site locally{.text-center}
 
 ## Gaius CLI Wrapper
