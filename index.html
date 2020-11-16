@@ -70,9 +70,10 @@
       <!-- Content here -->
       <h1>Gaius Static Site Generation Platform</h1>
 <p>Gaius is an ultra-fast static site generation platform that was inspired by <a href="https://jekyllrb.com/">Jekyll</a> and various blogging platforms that leveraged Jekyll (e.g. <a href="http://octopress.org/">Octopress</a>).</p>
-<p>The Gaius platform consists of four main components:</p>
+<p>The Gaius platform consists of the following components:</p>
 <ol>
 <li><a href="https://github.com/gaius-dev/gaius-engine/tree/main/src" class="badge badge-primary">Gaius engine</a> : Responsible for taking source input data and transforming it to HTML.</li>
+<li><a href="https://github.com/gaius-dev/gaius-engine/tree/main/src/GaiusServer" class="badge badge-primary">Gaius server</a> : A Kestrel based micro-server for testing generated sites locally.</li>
 <li><a href="https://github.com/gaius-dev/gaius-engine/tree/main/cli" class="badge badge-primary">Gaius CLI wrapper</a> : Responsible for updating the Gaius engine, Github Actions workflow, and the CLI wrapper itself.</li>
 <li><a href="https://github.com/gaius-dev/gaius-engine/tree/main/github-actions" class="badge badge-primary">Gaius Github Actions</a> : Provides a workflow which will automatically generate and deploy your site to Github Pages.</li>
 <li><a href="https://github.com/gaius-dev/gaius-starter" class="badge badge-primary">Gaius starter site</a> : Provides an opinionated starter site and template (Bootstrap based) that you can use to build your own sites.</li>
@@ -87,8 +88,14 @@
 </ol>
 <p>The Gaius engine is written 100% in C# (.NET Core), and as such requires the .NET Core Runtime in order to run the site generation process locally.</p>
 <figure class="d-block figure">
-<p><img src="//gaius-dev.github.io/gaius-docs/images/engine.png" class="d-block mx-auto figure-img rounded img-fluid" alt="Gaius Engine in Action" /></p>
+<p><img src="//gaius-dev.github.io/gaius-docs/images/engine.png" class="d-block mx-auto figure-img rounded img-fluid" alt="Gaius engine in action" /></p>
 <figcaption class="text-center figure-caption">Gaius engine in action</figcaption>
+</figure>
+<h2>Gaius Server</h2>
+<p>The Gaius Server is a <a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel">Kestrel</a> based micro-server that can be used to test out your generated site locally.  By default it runs on <code>http://localhost:5000</code>.</p>
+<figure class="d-block figure">
+<p><img src="//gaius-dev.github.io/gaius-docs/images/gaius-server.png" class="d-block mx-auto figure-img rounded img-fluid" alt="Gaius server running" /></p>
+<figcaption class="text-center figure-caption">Gaius server running to test generated site locally</figcaption>
 </figure>
 <h2>Gaius CLI Wrapper</h2>
 <p>The Gaius CLI consists of a shell script <em>(for Linux/OSX/Windows GitBash)</em> and a PowerShell script <em>(for Windows PowerShell)</em>.  It provides a simple wrapper around the Gaius engine itself, and most importantly provides an easy mechanism to update the Gaius engine, the Github Actions workflows, and the CLI itself.</p>
