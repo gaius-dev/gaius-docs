@@ -14,7 +14,7 @@ The Gaius platform consists of the following components:
 
 1. [Gaius engine](https://github.com/gaius-dev/gaius-engine/tree/main/src){.badge .badge-primary} : Responsible for taking source input data and transforming it to HTML.
 1. [Gaius server](https://github.com/gaius-dev/gaius-engine/tree/main/src/GaiusServer){.badge .badge-primary} : A Kestrel based micro-server for testing generated sites locally.
-1. [Gaius CLI wrapper](https://github.com/gaius-dev/gaius-engine/tree/main/cli){.badge .badge-primary} : Responsible for updating the Gaius engine, Github Actions workflow, and the CLI wrapper itself.
+1. [Gaius CLI wrapper](https://github.com/gaius-dev/gaius-engine/tree/main/cli){.badge .badge-primary} : Provides a convient way to interact with the Gaius engine and server, and to download updates to the Gaius platform.
 1. [Gaius Github Actions](https://github.com/gaius-dev/gaius-engine/tree/main/github-actions){.badge .badge-primary} : Provides a workflow which will automatically generate and deploy your site to Github Pages.
 1. [Gaius starter site](https://github.com/gaius-dev/gaius-starter){.badge .badge-primary} : Provides an opinionated starter site and template (Bootstrap based) that you can use to build your own sites.
 
@@ -46,7 +46,7 @@ The Gaius Server is a [Kestrel](https://docs.microsoft.com/en-us/aspnet/core/fun
 
 ## Gaius CLI Wrapper
 
-The Gaius CLI consists of a shell script *(for Linux/OSX/Windows GitBash)* and a PowerShell script *(for Windows PowerShell)*.  It provides a simple wrapper around the Gaius engine itself, and most importantly provides an easy mechanism to update the Gaius engine, the Github Actions workflows, and the CLI itself.
+The Gaius CLI consists of a shell script *(for Linux/OSX/Windows GitBash)* and a PowerShell script *(for Windows PowerShell)*.  It provides a simple wrapper around the Gaius engine itself, and most importantly provides an easy mechanism to update the Gaius engine, the Gaius server, the Github Actions workflows, and the CLI itself.
 
 ## Gaius Github Actions
 

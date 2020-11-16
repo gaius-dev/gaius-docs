@@ -61,7 +61,7 @@ $ git clone https://github.com/gaius-dev/gaius-starter <site-name>
 # e.g. git clone https://github.com/gaius-dev/gaius-starter rstrube.github.io
 ```
 
-This will clone the Gaius starter site, which includes the latest Gaius engine binaries, Github Actions, and CLI.
+This will clone the Gaius starter site, which includes the latest Gaius engine binaries, Gaius server, Github Actions, and CLI.
 
 Now navigate into the newly created repo directory.
 
@@ -91,7 +91,7 @@ Gaius Server 0.0.20
 Gaius CLI wrapper version 0.0.20
 ```
 
-This displays both the Gaius engine and CLI versions.  They should always be the same (unless you're doing something very specialized like beta testing a new version of our engine/CLI).
+This displays the Gaius engine, Gaius server, and CLI versions.  They should always be the same (unless you're doing something very specialized like beta testing a component).
 
 ### 3. Creating a new Github Repo
 
@@ -100,7 +100,7 @@ The Gaius platform has been designed specifically to work with Github Pages, so 
 :::{.alert .alert-warning}
 **Support for Github alternatives**
 ___
-The Gaius engine and the CLI are completely agnostic, and it would be quite simple to leverage them for other applications / uses.  We also hope to roll out support for Gitlab in the future as well!
+The Gaius engine, Gaius server, and the CLI are completely agnostic, and it would be quite simple to leverage them for other applications / uses.  We also hope to roll out support for Gitlab in the future as well!
 :::
 
 :::{.alert .alert-warning}
