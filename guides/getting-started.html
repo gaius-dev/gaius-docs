@@ -125,8 +125,9 @@
   \__, |\__,_|_|\__,_|___/
   |___/                   
 
-Gaius 0.0.14
-Gaius CLI wrapper version 0.0.14
+Gaius Engine 0.0.20
+Gaius Server 0.0.20
+Gaius CLI wrapper version 0.0.20
 </code></pre>
 <p>This displays both the Gaius engine and CLI versions.  They should always be the same (unless you're doing something very specialized like beta testing a new version of our engine/CLI).</p>
 <h3>3. Creating a new Github Repo</h3>
@@ -173,8 +174,18 @@ $ git remote -v
 <h3>5. Configure Gaius.json</h3>
 <p>The main configuration file for the Gaius engine is <code>gaius.json</code>.  Open it and look for the <code>GenerationRootPrefix</code> setting.  It should currently be set to <code>//gaius-dev.github.io/gaius-starter</code>.  You need to update this value to the URL that will be used to access your Github Pages site.  Here is an example <code>gaius.json</code> file that is used for my Github Pages user site [https://rstrube.github.io].</p>
 <pre><code class="language-json bg-light">{
-    &quot;Worker&quot; : &quot;Gaius.Core.Worker.MarkdownLiquid.MarkdownLiquidWorker&quot;,
-    &quot;GenerationUrlRootPrefix&quot; : &quot;//rstrube.github.io&quot;
+    &quot;Logging&quot;: {
+        &quot;LogLevel&quot;: {
+            &quot;Default&quot;: &quot;Information&quot;,
+            &quot;Microsoft&quot;: &quot;Warning&quot;,
+            &quot;Microsoft.Hosting.Lifetime&quot;: &quot;Information&quot;
+        }
+    },
+    &quot;AllowedHosts&quot;: &quot;*&quot;,
+    &quot;GaiusEngine&quot;: {
+        &quot;Worker&quot;: &quot;Gaius.Core.Worker.MarkdownLiquid.MarkdownLiquidWorker&quot;,
+        &quot;GenerationUrlRootPrefix&quot;: &quot;//gaius-dev.github.io/gaius-starter&quot;
+    }
 }
 </code></pre>
 <div class="alert alert-warning"><p><strong>Protocol agnostic GenerationUrlRootPrefix</strong></p>
