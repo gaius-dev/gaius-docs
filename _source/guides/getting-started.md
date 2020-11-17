@@ -86,9 +86,9 @@ You should see something like:
   \__, |\__,_|_|\__,_|___/
   |___/                   
 
-Gaius Engine 0.0.20
-Gaius Server 0.0.20
-Gaius CLI wrapper version 0.0.20
+Gaius Engine 0.0.23
+Gaius Server 0.0.23
+Gaius CLI wrapper version 0.0.23
 ```
 
 This displays the Gaius engine, Gaius server, and CLI versions.  They should always be the same (unless you're doing something very specialized like beta testing a component).
