@@ -14,29 +14,29 @@
 
             <ul class="navbar-nav ml-auto">
 
-                <li class="nav-item {% if pageId == 'index' %} active {% endif %}">
+                <li class="nav-item {% if page.id == 'index' %} active {% endif %}">
                     <a class="nav-link" href="{{root}}/">Home 
-                        {% if pageId == 'index' %}
+                        {% if page.id == 'index' %}
                             <span class="sr-only">(current)</span>
                         {% endif %}
                     </a>
                 </li>
 
                 <!-- dropdown navigation item -->
-                <li class="nav-item dropdown {% if pageId contains 'guides.' %} active {% endif %}">
+                <li class="nav-item dropdown {% if page.id contains 'guides.' %} active {% endif %}">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Guides
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 
-                        <a class="dropdown-item {% if pageId == 'guides.getting-started' %} active {% endif %}" href="{{root}}/guides/getting-started.html">Getting Started
-                            {% if pageId == 'guides.getting-started' %}
+                        <a class="dropdown-item {% if page.id == 'guides.getting-started' %} active {% endif %}" href="{{root}}/guides/getting-started.html">Getting Started
+                            {% if page.id == 'guides.getting-started' %}
                                 <span class="sr-only">(current)</span>
                             {% endif %}
                         </a>
 
-                        <a class="dropdown-item {% if pageId == 'guides.authoring-content' %} active {% endif %}" href="{{root}}/guides/authoring-content.html">Authoring Content
-                            {% if pageId == 'guides.authoring-content' %}
+                        <a class="dropdown-item {% if page.id == 'guides.authoring-content' %} active {% endif %}" href="{{root}}/guides/authoring-content.html">Authoring Content
+                            {% if page.id == 'guides.authoring-content' %}
                                 <span class="sr-only">(current)</span>
                             {% endif %}
                         </a>
