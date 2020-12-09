@@ -171,7 +171,7 @@ The main configuration file for the Gaius engine is `gaius.json`.  Open it and l
         "ThemesDirectoryName" : "_themes",
         "PostsDirectoryName" : "_posts",
         "ThemeName" : "default",
-        "GenerationUrlRootPrefix": "//gaius-dev.github.io/gaius-docs",
+        "GenerationUrlRootPrefix": "//rstrube.github.io",
         "AlwaysKeep" : [
             ".git"
         ],
