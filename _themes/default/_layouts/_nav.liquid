@@ -2,8 +2,8 @@
 
     <div class="container">
 
-        <a class="navbar-brand" href="{{root}}/">
-            <img src="{{root}}/images/logo.png" height="50" />
+        <a class="navbar-brand" href="{{site.url}}/">
+            <img src="{{site.url}}/images/logo.png" height="50" />
         </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,7 +15,7 @@
             <ul class="navbar-nav ml-auto">
 
                 <li class="nav-item {% if page.id == 'index' %} active {% endif %}">
-                    <a class="nav-link" href="{{root}}/">Home 
+                    <a class="nav-link" href="{{site.url}}/">Home 
                         {% if page.id == 'index' %}
                             <span class="sr-only">(current)</span>
                         {% endif %}
@@ -29,13 +29,13 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 
-                        <a class="dropdown-item {% if page.id == 'guides.getting-started' %} active {% endif %}" href="{{root}}/guides/getting-started.html">Getting Started
+                        <a class="dropdown-item {% if page.id == 'guides.getting-started' %} active {% endif %}" href="{{site.url}}/guides/getting-started.html">Getting Started
                             {% if page.id == 'guides.getting-started' %}
                                 <span class="sr-only">(current)</span>
                             {% endif %}
                         </a>
 
-                        <a class="dropdown-item {% if page.id == 'guides.authoring-content' %} active {% endif %}" href="{{root}}/guides/authoring-content.html">Authoring Content
+                        <a class="dropdown-item {% if page.id == 'guides.authoring-content' %} active {% endif %}" href="{{site.url}}/guides/authoring-content.html">Authoring Content
                             {% if page.id == 'guides.authoring-content' %}
                                 <span class="sr-only">(current)</span>
                             {% endif %}

@@ -32,7 +32,7 @@ The Gaius engine is written 100% in C# (.NET Core), and as such requires the .NE
 
 {.d-block}
 ^^^
-![Gaius engine in action]({{root}}/images/engine.png){.rounded .mx-auto .d-block}
+![Gaius engine in action]({{site.url}}/images/engine.png){.rounded .mx-auto .d-block}
 ^^^ Gaius engine in action{.text-center}
 
 ## Gaius Server
@@ -41,7 +41,7 @@ The Gaius Server is a [Kestrel](https://docs.microsoft.com/en-us/aspnet/core/fun
 
 {.d-block}
 ^^^
-![Gaius server running]({{root}}/images/gaius-server.png){.img-thumbnail .d-block .mx-auto}
+![Gaius server running]({{site.url}}/images/gaius-server.png){.img-thumbnail .d-block .mx-auto}
 ^^^ Gaius server running to test generated site locally{.text-center}
 
 ## Gaius CLI Wrapper
@@ -68,7 +68,7 @@ We use the Gaius platform to manage *this* site (the Gaius Documentation site). 
 
 ## Getting Started
 
-Please consult our comprehensive [Getting Started Guide]({{root}}/guides/getting-started.html){.badge .badge-primary} to start building a new site using Gaius!
+Please consult our comprehensive [Getting Started Guide]({{site.url}}/guides/getting-started.html){.badge .badge-primary} to start building a new site using Gaius!
 
 ## Acknowledgements
 
@@ -76,7 +76,7 @@ The Gaius platform would not be possible without some incredible open-source pro
 
 :::{.row}
 {.col-md-2 .text-center}
-![Markdig logo]({{root}}/images/markdig-logo.png){style="height:90px"}
+![Markdig logo]({{site.url}}/images/markdig-logo.png){style="height:90px"}
 
 {.col}
 [Markdig](https://github.com/lunet-io/markdig/) is an incredible open-source markdown processing engine for .NET.  It also provides numerous extensions that can enhance the capabilities of the source markdown data.
@@ -84,7 +84,7 @@ The Gaius platform would not be possible without some incredible open-source pro
 
 :::{.row}
 {.col-md-2 .text-center}
-![Fluid logo]({{root}}/images/fluid-logo.png){style="height:90px"}
+![Fluid logo]({{site.url}}/images/fluid-logo.png){style="height:90px"}
 
 {.col}
 [Fulid](https://github.com/sebastienros/fluid) is an open-source .NET template engine that is as close as possible to the Liquid template language.

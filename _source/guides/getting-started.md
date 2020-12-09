@@ -86,9 +86,9 @@ You should see something like:
   \__, |\__,_|_|\__,_|___/
   |___/                   
 
-Gaius Engine 0.0.24
-Gaius Server 0.0.24
-Gaius CLI wrapper version 0.0.24
+Gaius Engine 0.0.30
+Gaius Server 0.0.30
+Gaius CLI wrapper version 0.0.30
 ```
 
 This displays the Gaius engine, Gaius server, and CLI versions.  They should always be the same (unless you're doing something very specialized like beta testing a component).
@@ -121,7 +121,7 @@ When creating a new user based site it's extremely important to name the reposit
 
 {.d-block}
 ^^^
-![Creating a new repository]({{root}}/images/guides/getting-started/new-repo.png){.img-thumbnail .mx-auto .d-block}
+![Creating a new repository]({{site.url}}/images/guides/getting-started/new-repo.png){.img-thumbnail .mx-auto .d-block}
 ^^^ Creating a new repository{.text-center}
 
 ### 4. Updating Remotes
@@ -166,8 +166,16 @@ The main configuration file for the Gaius engine is `gaius.json`.  Open it and l
     },
     "AllowedHosts": "*",
     "GaiusEngine": {
-        "Worker": "Gaius.Core.Worker.MarkdownLiquid.MarkdownLiquidWorker",
-        "GenerationUrlRootPrefix": "//gaius-dev.github.io/gaius-starter"
+        "SourceDirectoryName" : "_source",
+        "GenerationDirectoryName" : "_generated",
+        "ThemesDirectoryName" : "_themes",
+        "PostsDirectoryName" : "_posts",
+        "ThemeName" : "default",
+        "GenerationUrlRootPrefix": "//gaius-dev.github.io/gaius-docs",
+        "AlwaysKeep" : [
+            ".git"
+        ],
+        "Worker" : "Gaius.Core.Worker.MarkdownLiquid.MarkdownLiquidWorker"
     }
 }
 ```
@@ -193,14 +201,14 @@ You should now see your initial commit appear in your `main` branch within your 
 
 {.d-block}
 ^^^
-![Initial commit]({{root}}/images/guides/getting-started/initial-commit.png){.img-thumbnail .mx-auto .d-block}
+![Initial commit]({{site.url}}/images/guides/getting-started/initial-commit.png){.img-thumbnail .mx-auto .d-block}
 ^^^ Initial commit{.text-center}
 
 In addition, if you click on **Actions** tab you should see that a workflow has already been kicked off which is generating your site from your source input data.  This workflow might have already completed by the time you examine the **Actions** tab.  If the workflow succeeded you should see something like:
 
 {.d-block}
 ^^^
-![Initial workflow run]({{root}}/images/guides/getting-started/initial-workflow-run.png){.img-thumbnail .mx-auto .d-block}
+![Initial workflow run]({{site.url}}/images/guides/getting-started/initial-workflow-run.png){.img-thumbnail .mx-auto .d-block}
 ^^^ Initial workflow run{.text-center}
 
 You can always view workflow runs to troubleshoot generation errors.
@@ -213,7 +221,7 @@ To do this navigate to the **Settings -> Options-** tab for your repository.  Sc
 
 {.d-block}
 ^^^
-![Github Pages configuration]({{root}}/images/guides/getting-started/gh-pages-config.png){.img-thumbnail .mx-auto .d-block}
+![Github Pages configuration]({{site.url}}/images/guides/getting-started/gh-pages-config.png){.img-thumbnail .mx-auto .d-block}
 ^^^ Github Pages configuration{.text-center}
 
 ### 8. Confirm Site Generation
@@ -222,7 +230,7 @@ You should now be able to navigate to: `https://<user>.github.io` to view your g
 
 {.d-block}
 ^^^
-![Initial generated site]({{root}}/images/guides/getting-started/initial-generated-site.png){.img-thumbnail .mx-auto .d-block}
+![Initial generated site]({{site.url}}/images/guides/getting-started/initial-generated-site.png){.img-thumbnail .mx-auto .d-block}
 ^^^ Initial generated site{.text-center}
 
-Congratulations you're now ready to view our [Authoring Content Guide]({{root}}/guides/authoring-content.html){.badge .badge-primary} to learn more about creating new content for your site!
+Congratulations you're now ready to view our [Authoring Content Guide]({{site.url}}/guides/authoring-content.html){.badge .badge-primary} to learn more about creating new content for your site!
