@@ -1,12 +1,10 @@
 ---
 layout: default
-title: Gaius Getting Started Guide
+title: Getting Started Guide
 author: Robert Strube
 keywords: Gaius, Documentation, Static Site Generator, Getting Started
 description: Gaius Getting Started Guide
 ...
-
-# Getting Started
 
 Getting started with Gaius is a snap!
 
