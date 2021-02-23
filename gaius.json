@@ -21,7 +21,6 @@
         "GenerationUrlRootPrefix": "//gaius-dev.github.io/gaius-docs",
         "AlwaysKeep": [
             ".git"
-        ],
-        "Worker": "Gaius.Worker.MarkdownLiquid.MarkdownLiquidWorker"
+        ]
     }
 }
