@@ -1,11 +1,11 @@
 ---
-layout: default
+layout: default-sidebar
 title: Gaius Static Site Generation Platform
 author: Robert Strube
 keywords: Gaius, Documentation, Static Site Generator
 description: Gaius Documentation Homepage
 nav_order: 1
-nav_title: Home
+nav_title: Documentation Site Home
 ...
 
 Gaius is an ultra-fast static site generation platform that was inspired by [Jekyll](https://jekyllrb.com/) and various blogging platforms that leveraged Jekyll (e.g. [Octopress](http://octopress.org/)).
