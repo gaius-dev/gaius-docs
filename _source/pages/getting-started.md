@@ -22,7 +22,7 @@ It's recommended that you have some experience and familarity with the following
 Gauis requires certain software to be installed on your local system:
 
 ###### .NET Runtime / SDK{.pt-1}
-Gaius is written in C# using .NET 5.0.  As such you'll need to install the proper **.NET SDK** installed on your local machine in order to build and test your site locally.  Please visit the [.NET Download Page](https://dotnet.microsoft.com/download/dotnet/5.0) to download and install the .NET 5.0 SDK (latest version).
+Gaius is written in C# using .NET 5.0.  As such you'll need to install the proper **.NET SDK** on your local machine in order to build and test your site.  Please visit the [.NET Download Page](https://dotnet.microsoft.com/download/dotnet/5.0) to download and install the .NET 5.0 SDK (latest version).
 
 For more information please consult the [.NET SDK Installation]({{site.url}}/) guide.
 
