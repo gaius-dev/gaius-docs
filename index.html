@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <meta name="description" content="Gaius Static Site Generation Platform Documentation Homepage">
+    <meta name="description" content="Gaius Static Site Generation Platform Documentation Home">
     <meta name="keywords" content="Gaius, Documentation, Static Site Generator">
     <meta name="author" content="Robert Strube">
 
@@ -19,7 +19,7 @@
     <!-- local CSS -->
     <link rel="stylesheet" href="//gaius-dev.github.io/gaius-docs/styles/main.css">
 
-    <title>Gaius Platform Documentation Homepage</title>
+    <title>Gaius Platform Documentation</title>
 </head>
   <body class="bg-white">
     
@@ -48,7 +48,7 @@
                         <!-- This loops through the site navigation -->
 <li class="nav-item">
 
-    <a class="nav-link pt-1 pb-1 pr-2 pl-2" href="//gaius-dev.github.io/gaius-docs/">Documentation Homepage
+    <a class="nav-link pt-1 pb-1 pr-2 pl-2" href="//gaius-dev.github.io/gaius-docs/">Gaius Documentation Home
         <span class="sr-only">(current)</span>
     </a>
 
@@ -56,6 +56,10 @@
         <ul class="sidebar-sublist pl-4">
             <!-- This loops through the site navigation level 2-->
 <li class="nav-item">
+    <a class="nav-link pt-1 pb-1 pr-2 pl-2" href="//gaius-dev.github.io/gaius-docs/pages/getting-started/">Getting Started
+    </a>
+
+</li><li class="nav-item">
     <a class="nav-link pt-1 pb-1 pr-2 pl-2" href="//gaius-dev.github.io/gaius-docs/pages/acknowledgements/">Acknowledgements
     </a>
 
@@ -85,7 +89,7 @@
 
                 <!-- This loops through the site navigation -->
 <li class="nav-item active">
-    <a class="nav-link" href="//gaius-dev.github.io/gaius-docs/">Documentation Homepage
+    <a class="nav-link" href="//gaius-dev.github.io/gaius-docs/">Gaius Documentation Home
             <span class="sr-only">(current)</span>
     </a>
 </li>
@@ -94,7 +98,7 @@
     </div>
 </nav>
     <div class="container pt-5 pb-5">
-      <h3 class="mb-3">Gaius Platform Documentation Homepage</h3>
+      <h3 class="mb-3">Gaius Platform Documentation</h3>
 
       
       <!-- Content here -->
@@ -109,33 +113,30 @@
 </ol>
 <p>The Gaius platform consists of the following components:</p>
 <ol>
-<li><a href="https://github.com/gaius-dev/gaius-engine/tree/main/src">Gaius engine</a>: A console application and miro-web server that is used to generate your site and test it locally.</li>
-<li><a href="https://github.com/gaius-dev/gaius-engine/tree/main/github-actions">Gaius Github Actions</a>: Provides a workflow which  automatically generates and deploys your site to Github Pages.</li>
-<li><a href="https://github.com/gaius-dev/gaius-starter">Gaius example site</a> : Provides an opinionated example site and template (Bootstrap based) that you can use as the basis for your own site.</li>
+<li><a href="https://github.com/gaius-dev/gaius-engine/tree/main/src">Gaius engine</a>: A console application and micro-web server that is used to generate your site <em>and</em> test it locally.</li>
+<li><a href="https://github.com/gaius-dev/gaius-engine/tree/main/github-actions">Gaius Github Actions</a>: Provides a workflow which automatically generates and deploys your site to Github Pages.</li>
+<li><a href="https://github.com/gaius-dev/gaius-starter">Gaius starter site</a>: Provides a <em>nearly</em> empty starter site and template (Bootstrap based) that you can use as the basis for your own sites.</li>
 </ol>
-<h3>Gaius Engine</h3>
-<p>The Gaius engine is used to both generate and test your site. It is written 100% in C# (.NET Core), and as such requires .NET Core runtime components to be installed on your system.</p>
+<h4 class="pt-3">Gaius Engine</h4>
+<p>The Gaius engine is used to both generate and test your site locally. It is written 100% in C# (.NET 5.0), and weights around <strong>740KB</strong> (not counting the .NET runtime components).</p>
 <figure class="d-block figure">
-<p><img src="//gaius-dev.github.io/gaius-docs/images/engine.png" class="rounded mx-auto d-block img-fluid" alt="Gaius engine in action" /></p>
+<p><img src="//gaius-dev.github.io/gaius-docs/images/engine.png" class="d-block rounded mx-auto img-fluid" alt="Gaius engine in action" /></p>
 <figcaption class="text-center figure-caption">Gaius engine in action</figcaption>
 </figure>
-<p>The engine also contains a <a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel">Kestrel</a> based micro-server that can be used to test out your generated site locally.  By default it runs on <code>http://localhost:5000</code>.</p>
+<p>The engine also contains a <a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel">Kestrel</a> based micro-server that can be used to run and test your generated site locally.  By default it runs on <code>http://localhost:5000</code>.</p>
 <figure class="d-block figure">
-<p><img src="//gaius-dev.github.io/gaius-docs/images/gaius-server.png" class="img-thumbnail d-block mx-auto img-fluid" alt="Gaius engine running local HTTP server to test site" /></p>
+<p><img src="//gaius-dev.github.io/gaius-docs/images/gaius-server.png" class="d-block img-thumbnail mx-auto img-fluid" alt="Gaius engine running local HTTP server to test site" /></p>
 <figcaption class="text-center figure-caption">Gaius engine running local HTTP server to test site</figcaption>
 </figure>
-<h3>Gaius Github Actions</h3>
-<p>A Gaius Github Actions workflow has been provided to make it extremely easy to deploy your site using Github Pages.  Simply maintain your source input files in the <code>main</code> branch, and the Github Actions workflow will automatically use the Gaius engine to process your source input files, and push the output to the <code>gh-pages</code> branch.  You can also view workflow runs directly in the Github interface, allowing you to easily troubleshoot any site generation issues.</p>
-<div class="alert alert-warning"><p><strong>Github default branch change</strong></p>
-<hr />
-<p>Github has recently switched from <code>master</code> being the default branch name for new repositories, to <code>main</code>.  As such our Github Actions workflow has been updated to reflect this.  In order for the Gaius Github Actions workflow to function, you must have your default branch set as <code>main</code> and maintain all of your source input data in the <code>main</code> branch.</p>
-</div>
-<h3>Gaius Example Site</h3>
-<p>The <a href="https://gaius-dev.github.io/gaius-starter">Gaius example site</a> provides an example site and template that you can use as a starting point for your new site.  The template is built using <a href="https://getbootstrap.com/docs/4.6/getting-started/introduction/">Bootstrap 4.6</a>.</p>
-<h3>Eating our Own Dog Food!</h3>
+<h4 class="pt-3">Gaius Github Actions</h4>
+<p>Gaius provides a <a href="https://github.com/features/actions">Github Actions</a> workflow to make it extremely easy to deploy your site using Github Pages.  Simply maintain your source input files in the <code>main</code> branch, and the Github Actions workflow will automatically use the Gaius engine to process your source input files, and push the output to the <code>gh-pages</code> branch.  You can also view workflow runs directly in the Github interface, allowing you to easily troubleshoot any site generation issues.</p>
+<h4 class="pt-3">Gaius Starter Site</h4>
+<p>The <a href="https://gaius-dev.github.io/gaius-starter">Gaius starter site</a> provides a <em>nearly</em> empty starter site that can be used as the basis for creating new sites.  It comes with a homepage (blog listing page), a single blog post, and the default Gaius theme.  The theme is built using <a href="https://getbootstrap.com/docs/4.6/getting-started/introduction/">Bootstrap</a> and <a href="https://shopify.github.io/liquid/">Liquid Templates</a>.</p>
+<p>There is also a more fleshed out <a href="https://gaius-dev.github.io/gaius-example">Gaius example site</a> which demonstrates the capabilities of the Gaius platform.</p>
+<h4 class="pt-3">Eating our Own Dog Food!</h4>
 <p>We use the Gaius platform to manage <em>this</em> site (the Gaius Documentation site).  This provides us with an excellent way to test and ehnance the platform and ensure that it continues to work smoothly.</p>
-<h3>Getting Started</h3>
-<p>Please consult our comprehensive <a href="//gaius-dev.github.io/gaius-docs/pages/getting-started/">Getting Started Guide</a> to start building a new site using Gaius!</p>
+<h4 class="pt-3">Getting Started</h4>
+<p>Please consult our <a href="//gaius-dev.github.io/gaius-docs/pages/getting-started/">Getting Started</a> guide to start building a new site using Gaius!</p>
 
 
     </div>
@@ -147,7 +148,7 @@
       <a href="#">Back to top</a>
     </p>
     <p class="text-muted small">
-      Generated by <a href="https://github.com/gaius-dev/gaius-engine/releases">Gaius v0.0.132</a> on 2021-03-06 01:28:48Z.<br/>
+      Generated by <a href="https://github.com/gaius-dev/gaius-engine/releases">Gaius v0.0.132</a> on 2021-03-06 05:06:55Z.<br/>
       Please visit the <a href="https://gaius-dev.github.io/gaius-docs/">Gaius documentation site</a> for more information.<br/>
       Gaius <a href="https://github.com/gaius-dev/gaius-starter/tree/main/_themes/default">default theme</a> is built on © <a href="https://getbootstrap.com/">Bootstrap</a>.
     </p>
