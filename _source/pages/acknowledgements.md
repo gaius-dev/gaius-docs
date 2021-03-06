@@ -4,7 +4,7 @@ title: Acknowledgements
 author: Robert Strube
 keywords: Gaius, Documentation, Static Site Generator
 description: Gaius Static Site Generation Platform Acknowledgements
-nav_order: 1.1
+nav_order: 1.2
 nav_title: Acknowledgements
 ...
 

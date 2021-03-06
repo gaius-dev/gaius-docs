@@ -1,4 +1,5 @@
 ---
+draft: true
 layout: default-sidebar
 title: Getting Started Guide
 author: Robert Strube
