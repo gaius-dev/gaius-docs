@@ -28,17 +28,19 @@ The Gaius platform consists of the following components:
 
 The Gaius engine is used to both generate and test your site locally. It is written 100% in C# (.NET 5.0), and weights around **740KB** (not counting the .NET runtime components).
 
-{.d-block}
+:::{.text-center}
 ^^^
-![Gaius engine in action]({{site.url}}/images/engine.png){.d-block .rounded .mx-auto}
-^^^ Gaius engine in action{.text-center}
+![Gaius engine in action]({{site.url}}/images/engine.png){.img-fluid .rounded}
+^^^ Gaius engine in action
+:::
 
 The engine also contains a [Kestrel](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel) based micro-server that can be used to run and test your generated site locally.  By default it runs on `http://localhost:5000`.
 
-{.d-block}
+:::{.text-center}
 ^^^
-![Gaius engine running local HTTP server to test site]({{site.url}}/images/gaius-server.png){.d-block .img-thumbnail .mx-auto}
-^^^ Gaius engine running local HTTP server to test site{.text-center}
+![Gaius engine running local HTTP server to test site]({{site.url}}/images/gaius-server.png){.img-fluid .img-thumbnail}
+^^^ Gaius engine running local HTTP server to test site
+:::
 
 #### Gaius Github Actions{.pt-3}
 

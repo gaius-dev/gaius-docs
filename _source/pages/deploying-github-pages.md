@@ -28,10 +28,11 @@ This Guide will assume that you are creating a user site.
 When creating a new user based site it's extremely important to name the repository `<user>.github.io` e.g. `rstrube.github.io`.
 :::
 
-{.d-block}
+:::{.text-center}
 ^^^
-![Creating a new repository]({{site.url}}/images/guides/getting-started/new-repo.png){.img-thumbnail .mx-auto .d-block}
-^^^ Creating a new repository{.text-center}
+![Creating a new repository]({{site.url}}/images/guides/getting-started/new-repo.png){.img-fluid .img-thumbnail}
+^^^ Creating a new repository
+:::
 
 #### Updating Remotes
 
@@ -112,17 +113,19 @@ $ git push -u origin main
 ```
 You should now see your initial commit appear in your `main` branch within your repository:
 
-{.d-block}
+:::{.text-center}
 ^^^
-![Initial commit]({{site.url}}/images/guides/getting-started/initial-commit.png){.img-thumbnail .mx-auto .d-block}
-^^^ Initial commit{.text-center}
+![Initial commit]({{site.url}}/images/guides/getting-started/initial-commit.png){.img-fluid .img-thumbnail}
+^^^ Initial commit
+:::
 
 In addition, if you click on **Actions** tab you should see that a workflow has already been kicked off which is generating your site from your source input data.  This workflow might have already completed by the time you examine the **Actions** tab.  If the workflow succeeded you should see something like:
 
-{.d-block}
+:::{.text-center}
 ^^^
-![Initial workflow run]({{site.url}}/images/guides/getting-started/initial-workflow-run.png){.img-thumbnail .mx-auto .d-block}
+![Initial workflow run]({{site.url}}/images/guides/getting-started/initial-workflow-run.png){.img-fluid .img-thumbnail}
 ^^^ Initial workflow run{.text-center}
+:::
 
 You can always view workflow runs to troubleshoot generation errors.
 
@@ -132,16 +135,18 @@ The final step is to configure your repository to support Github Pages.
 
 To do this navigate to the **Settings -> Options-** tab for your repository.  Scroll down until you see the Github Pages configuration.  It's most likely configured to use the `main` branch by default.  Change this branch to `gh-pages`.  This will configure the Github Pages infrastructure to look in your `gh-pages` branch for your site resources (i.e. the generated HTML, images, etc.).
 
-{.d-block}
+:::{.text-center}
 ^^^
-![Github Pages configuration]({{site.url}}/images/guides/getting-started/gh-pages-config.png){.img-thumbnail .mx-auto .d-block}
-^^^ Github Pages configuration{.text-center}
+![Github Pages configuration]({{site.url}}/images/guides/getting-started/gh-pages-config.png){.img-fluid .img-thumbnail}
+^^^ Github Pages configuration
+:::
 
 #### Validate Site
 
 You should now be able to navigate to: `https://<user>.github.io` to view your generated site (e.g. [https://rstrube.github.io]).  It should look something like:
 
-{.d-block}
+:::{.text-center}
 ^^^
-![Initial generated site]({{site.url}}/images/guides/getting-started/initial-generated-site.png){.img-thumbnail .mx-auto .d-block}
-^^^ Initial generated site{.text-center}
+![Initial generated site]({{site.url}}/images/guides/getting-started/initial-generated-site.png){.img-fluid .img-thumbnail}
+^^^ Initial generated site
+:::
