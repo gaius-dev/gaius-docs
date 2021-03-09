@@ -6,6 +6,7 @@ keywords: Gaius, Documentation, Static Site Generator
 description: Gaius Static Site Generation Platform Documentation Home
 nav_order: 1
 nav_title: Gaius Documentation Home
+nav_in_header: true
 ...
 
 Gaius is an ultra-fast static site generation platform that was inspired by [Jekyll](https://jekyllrb.com/).  The engine uses a combination of [Markdown](https://www.markdownguide.org/) files and [Liquid Templates](https://shopify.github.io/liquid/) to generate a static site which can be easily deployed to [Github Pages](https://pages.github.com/) or any other HTTP server.

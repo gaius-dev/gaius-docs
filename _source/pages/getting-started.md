@@ -4,7 +4,7 @@ title: Getting Started
 author: Robert Strube
 keywords: Gaius, Documentation, Static Site Generator, Getting Started
 description: Gaius Getting Started Guide
-nav_order: 1.1
+nav_order: 2
 nav_title: Getting Started
 ...
 

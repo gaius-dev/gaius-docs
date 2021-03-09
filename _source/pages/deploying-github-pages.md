@@ -5,7 +5,7 @@ title: Deploying to Github Pages
 author: Robert Strube
 keywords: Gaius, Documentation, Static Site Generator, Getting Started, Deploying to Github Pages
 description: Gaius Getting Started Guide Deploying to Github Pages
-nav_order: 1.8
+nav_order: 8
 ...
 
 #### Creating a new Github Repo
