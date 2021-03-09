@@ -22,86 +22,74 @@
     <title>Getting Started</title>
 </head>
   <body class="bg-white">
-    
-<!-- Sidebar -->
-<div class="row">
-    <div class="col-auto bg-light border-right py-3" id="sidebar">
 
-        <!-- Fixed position toggler button -->
-        <button class="btn btn-dark" id="sidebar-collapsed-toggler" type="button">
-            <i class="bi-box-arrow-right"></i>
-        </button>
+<header class="navbar navbar-expand-md navbar-light bg-light border-bottom gaius-navbar">
 
-        <div class="row pb-3">
-            <div class="col">
-                <button class="d-flex btn btn-dark mx-auto" id="sidebar-expanded-toggler" type="button">
-                    <span><i class="bi-box-arrow-left pr-2"></i>Close Navigation</span>
-                </button>
-            </div>
-        </div>
+    <button class="btn btn-dark px-3 d-md-none" type="button" data-toggle="collapse" data-target="#gaius-sidebar-nav" aria-controls="gaius-sidebar-nav" aria-expanded="true" aria-label="Toggle sidebar">
+        <span class="bi-layout-text-sidebar"></span>
+    </button>
 
-        <div class="row">
-            <div class="col px-4">
-                <nav>
-                    <ul class="nav flex-column">
-                        
-                        <!-- This loops through the site navigation -->
-<li class="nav-item">
-
-    <a class="nav-link py-1 px-2" href="//gaius-dev.github.io/gaius-docs/">Gaius Documentation Home
+    <a class="navbar-brand m-0" href="//gaius-dev.github.io/gaius-docs/">
+        <img src="//gaius-dev.github.io/gaius-docs/images/logo.png" />
     </a>
 
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#gaius-navbar-content" aria-controls="gaius-navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <ul class="sidebar-sublist pl-4">
-            <!-- This loops through the site navigation level 2-->
-<li class="nav-item">
-    <a class="nav-link py-1 px-2" href="//gaius-dev.github.io/gaius-docs/pages/getting-started/">Getting Started
+    <div id="gaius-navbar-content" class="collapse navbar-collapse">
+
+        <ul class="navbar-nav ml-auto">
+
+            <!-- This loops through the site navigation -->
+    <li class="nav-item active">
+        <a class="nav-link" href="//gaius-dev.github.io/gaius-docs/">Gaius Documentation Home
+        </a>
+    </li>
+
+        </ul>
+    </div>
+
+</header>
+      <div class="container-fluid">
+        <div class="row flex-xl-nowrap">
+
+<!-- Sidebar -->
+<div class="col-md-4 col-lg-3 col-xl-2 bg-light border-right gaius-sidebar">
+    <div id="gaius-sidebar-nav" class="d-md-block row collapse show">
+        <nav class="gaius-sidebar-links">
+                
+            <!-- This loops through the site navigation -->
+<div>
+    <a class="d-block py-1" href="//gaius-dev.github.io/gaius-docs/">Gaius Documentation Home
+    </a>
+<div>
+
+<div>
+    <a class="d-block py-1" href="//gaius-dev.github.io/gaius-docs/pages/getting-started/">Getting Started
             <span class="sr-only">(current)</span>
     </a>
+<div>
 
-</li><li class="nav-item">
-    <a class="nav-link py-1 px-2" href="//gaius-dev.github.io/gaius-docs/pages/acknowledgements/">Acknowledgements
+<div>
+    <a class="d-block py-1" href="//gaius-dev.github.io/gaius-docs/pages/acknowledgements/">Acknowledgements
     </a>
+<div>
 
-</li>        </ul>
 
-
-</li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
+        </nav>
     </div>
-</div><nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-    <div class="container">
+</div>
+          <main class="col-md-8 col-lg-9 col-xl-10" role="main">
+            <div class="container py-5">
+              <div class="row">
+                <div class="col">
 
-        <a class="navbar-brand ml-5 ml-md-0" href="//gaius-dev.github.io/gaius-docs/">
-            <img src="//gaius-dev.github.io/gaius-docs/images/logo.png" height="50" />
-        </a>
+                  <h3 class="mb-3">Getting Started</h3>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <div class="collapse navbar-collapse" id="navbarContent">
-
-            <ul class="navbar-nav ml-auto">
-
-                <!-- This loops through the site navigation -->
-<li class="nav-item active">
-    <a class="nav-link" href="//gaius-dev.github.io/gaius-docs/">Gaius Documentation Home
-    </a>
-</li>
-            </ul>
-        </div>
-    </div>
-</nav>
-    <div class="container py-5">
-      <h3 class="mb-3">Getting Started</h3>
-
-      
-      <!-- Content here -->
-      <p>The Gaius platform has been designed to get you up and running as quickly as possible.  That being said, Gaius is a platform that's geared more towards a technical audience.  If you're unfamiliar with <strong>git</strong> and working within a text editor / IDE you should probably look elsewhere.</p>
+                  <!-- Content here -->
+                  <p>The Gaius platform has been designed to get you up and running as quickly as possible.  That being said, Gaius is a platform that's geared more towards a technical audience.  If you're unfamiliar with <strong>git</strong> and working within a text editor / IDE you should probably look elsewhere.</p>
 <p>It's recommended that you have some experience and familarity with the following items before chosing Gaius:</p>
 <ol>
 <li>Working on the command line.</li>
@@ -231,22 +219,23 @@ info: Gaius.Server.BackgroundHostedService.BuildRequestQueueProcessorHostedServi
 <li>To learn how to deploy to Github Pages please refer to the <a href="//gaius-dev.github.io/gaius-docs/pages/deploying-github-pages/">Deploying to Github Pages</a> guide.</li>
 </ul>
 
+                  
+                </div>
+              </div>
+            </div>
+          </main>
+          
+        </div>
+      </div>
 
-    </div>
+<footer class="bg-light border-top border-bottom py-4 pl-4">
 
-<footer class="text-muted bg-light border-top border-bottom">
-
-  <div class="container pt-3 pb-1">
-    <p class="float-right">
-      <a href="#">Back to top</a>
-    </p>
-    <p class="text-muted small">
-      Generated by <a href="https://github.com/gaius-dev/gaius-engine/releases">Gaius v0.0.136</a> on 2021-03-08 21:15:06Z.<br/>
+    <p class="text-muted small m-0">
+      Generated by <a href="https://github.com/gaius-dev/gaius-engine/releases">Gaius v0.0.140</a> on 2021-03-09 06:23:54Z.<br/>
       Please visit the <a href="https://gaius-dev.github.io/gaius-docs/">Gaius documentation site</a> for more information.<br/>
       Gaius <a href="https://github.com/gaius-dev/gaius-starter/tree/main/_themes/default">default theme</a> is built on © <a href="https://getbootstrap.com/">Bootstrap</a>.
     </p>
-  </div>
-  
+
 </footer>
 
 <!-- Optional JavaScript -->
@@ -260,6 +249,6 @@ info: Gaius.Server.BackgroundHostedService.BuildRequestQueueProcessorHostedServi
 <!-- local JS -->
 <script src="//gaius-dev.github.io/gaius-docs/scripts/main.js"></script>
 <!-- initiate highlight.js -->
-<script>hljs.highlightAll();</script>
+<script>hljs.highlightAll();</script>      
   </body>
 </html>
