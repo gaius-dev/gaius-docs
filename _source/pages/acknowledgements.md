@@ -4,8 +4,7 @@ title: Acknowledgements
 author: Robert Strube
 keywords: Gaius, Documentation, Static Site Generator
 description: Gaius Static Site Generation Platform Acknowledgements
-nav_order: 9
-nav_title: Acknowledgements
+sidebar_order: 3
 ...
 
 The Gaius platform would not be possible without some incredible open-source projects.  The Gaius engine leverages the following libraries:

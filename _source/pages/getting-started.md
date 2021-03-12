@@ -4,8 +4,7 @@ title: Getting Started
 author: Robert Strube
 keywords: Gaius, Documentation, Static Site Generator, Getting Started
 description: Gaius Getting Started Guide
-nav_order: 2
-nav_title: Getting Started
+sidebar_order: 1
 ...
 
 The Gaius platform has been designed to get you up and running as quickly as possible.  That being said, Gaius is a platform that's geared more towards a technical audience.  If you're unfamiliar with **git** and working within a text editor / IDE you should probably look elsewhere.
