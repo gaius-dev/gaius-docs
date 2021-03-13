@@ -1,5 +1,5 @@
 ---
-layout: default-sidebar
+layout: default
 title: Gaius Platform Documentation
 author: Robert Strube
 keywords: Gaius, Documentation, Static Site Generator

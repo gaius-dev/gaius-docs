@@ -1,5 +1,5 @@
 ---
-layout: default-sidebar
+layout: default
 title: Acknowledgements
 author: Robert Strube
 keywords: Gaius, Documentation, Static Site Generator

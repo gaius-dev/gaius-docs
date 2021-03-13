@@ -1,6 +1,6 @@
 ---
 draft: true
-layout: default-sidebar
+layout: default
 title: Deploying to Github Pages
 author: Robert Strube
 keywords: Gaius, Documentation, Static Site Generator, Getting Started, Deploying to Github Pages

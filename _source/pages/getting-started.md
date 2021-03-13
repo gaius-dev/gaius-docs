@@ -1,5 +1,5 @@
 ---
-layout: default-sidebar
+layout: default
 title: Getting Started
 author: Robert Strube
 keywords: Gaius, Documentation, Static Site Generator, Getting Started
