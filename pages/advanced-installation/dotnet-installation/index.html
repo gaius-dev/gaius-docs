@@ -6,8 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <meta name="description" content="Gaius Static Site Generation Platform Acknowledgements">
-    <meta name="keywords" content="Gaius, Documentation, Static Site Generator">
+    <meta name="description" content=".NET Installation Guide">
+    <meta name="keywords" content="Gaius, Documentation, Static Site Generator, Advanced Installation Guide, .NET Installation">
     <meta name="author" content="Robert Strube">
 
     <!-- Bootstrap CSS -->
@@ -19,7 +19,7 @@
     <!-- local CSS -->
     <link rel="stylesheet" href="//gaius-dev.github.io/gaius-docs/styles/main-637514554937265648.css">
 
-    <title>Acknowledgements</title>
+    <title>.NET Installation</title>
 </head>
   <body class="bg-white">
 
@@ -72,13 +72,14 @@
 
 <li class="nav-item">
 
-    <a class="nav-link " href="//gaius-dev.github.io/gaius-docs/pages/advanced-installation/">Advanced Installation
+    <a class="nav-link active" href="//gaius-dev.github.io/gaius-docs/pages/advanced-installation/">Advanced Installation
     </a>
 
-        <ul class="nav pl-4 mb-3 d-none">
+        <ul class="nav pl-4 mb-3 ">
             <!-- This loops through the site sidbar level 2-->
 <li class="nav-item">
-    <a class="nav-link small py-1 gaius-child-nav-link " href="//gaius-dev.github.io/gaius-docs/pages/advanced-installation/dotnet-installation/">.NET Installation
+    <a class="nav-link small py-1 gaius-child-nav-link active" href="//gaius-dev.github.io/gaius-docs/pages/advanced-installation/dotnet-installation/">.NET Installation
+            <span class="sr-only">(current)</span>
     </a>
 </li>        </ul>
 
@@ -87,8 +88,7 @@
 
 <li class="nav-item">
 
-    <a class="nav-link active" href="//gaius-dev.github.io/gaius-docs/pages/acknowledgements/">Acknowledgements
-            <span class="sr-only">(current)</span>
+    <a class="nav-link " href="//gaius-dev.github.io/gaius-docs/pages/acknowledgements/">Acknowledgements
     </a>
 
 
@@ -99,26 +99,35 @@
       <div class="container py-4 py-md-5">
         <main class="gaius-main has-sidebar" role="main">
 
-          <h3 class="mb-3">Acknowledgements</h3>
+          <h3 class="mb-3">.NET Installation</h3>
 
 
           <!-- Content here -->
-          <p>The Gaius platform would not be possible without some incredible open-source projects.  The Gaius engine leverages the following libraries:</p>
-<div class="row pb-3 align-items-center"><p class="col-auto">
-<img src="//gaius-dev.github.io/gaius-docs/images/pages/acknowledgements/markdig-logo.png" style="height:90px" alt="Markdig logo" /></p>
-<p class="col">
-<a href="https://github.com/lunet-io/markdig/">Markdig</a> is an incredible open-source markdown processing engine for .NET.  It also provides numerous extensions that can enhance the capabilities of the source markdown data.</p>
-</div>
-<div class="row pb-3 align-items-center"><p class="col-auto">
-<img src="//gaius-dev.github.io/gaius-docs/images/pages/acknowledgements/fluid-logo.png" style="height:90px" alt="Fluid logo" /></p>
-<p class="col">
-<a href="https://github.com/sebastienros/fluid">Fulid</a> is an open-source .NET template engine that is as close as possible to the Liquid template language.</p>
-</div>
-<div class="row pb-3 align-items-center"><p class="col-auto text-center" style="width:120px">
-<strong>YAML DotNet</strong></p>
-<p class="col">
-<a href="https://github.com/aaubry/YamlDotNet">YamlDotNet</a> is an excellent .NET based library for processing YAML.</p>
-</div>
+          <p>Gaius requires the .NET SDK or specific .NET Runtimes to be installed.</p>
+<p>For Windows, MacOS, and most common Linux distributions (Ubuntu, Fedora, etc.) please visit the <a href="https://dotnet.microsoft.com/download/dotnet/5.0/">.NET 5.0 Download Page</a> to download and install the .NET 5.0 SDK / Runtimes.</p>
+<p>The simplest approach is to install the full .NET 5.0 SDK, which includes the following runtimes:</p>
+<ul>
+<li>.NET Runtime 5.0.x <strong>(required by Gaius)</strong></li>
+<li>ASP.NET Core Runtime 5.0.x <strong>(required by Gaius)</strong></li>
+<li>.NET Desktop Runtime 5.0.x</li>
+</ul>
+<p>It's also possible to install just the <strong>.NET Runtime</strong> and the <strong>ASP.NET Core Runtime</strong>.  This has a smaller installation footprint, but the installation is more piecemeal.</p>
+<h4 class="pt-3">Arch Linux .NET Installation (Recommended Packages)</h4>
+<p>For Arch Linux users it is recommended to use the AUR .NET packages as these are kept more up to date.</p>
+<p>Use an AUR helper (e.g. <a href="">Paru</a> or <a href="">Yay</a>) to install the required packages:</p>
+<pre><code class="language-shell">paru -Syu dotnet-host-bin dotnet-runtime-bin dotnet-sdk-bin dotnet-targeting-pack-bin aspnet-runtime-bin aspnet-targeting-pack-bin
+</code></pre>
+<h4 class="pt-3">Validating your .NET Installation</h4>
+<p>Run some terminal commands to validate your .NET installation:</p>
+<pre><code class="language-shell">$ dotnet --version
+5.0.xxx
+
+$ dotnet --list-runtimes 
+Microsoft.AspNetCore.App 5.0.x [/usr/share/dotnet/shared/Microsoft.AspNetCore.App]
+Microsoft.NETCore.App 5.0.x [/usr/share/dotnet/shared/Microsoft.NETCore.App]
+
+</code></pre>
+<p><em>Note: there might be additional runtimes listed if you installed the full .NET SDK.</em></p>
 
 
         </main>

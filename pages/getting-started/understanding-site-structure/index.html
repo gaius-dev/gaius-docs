@@ -6,8 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <meta name="description" content="Gaius Static Site Generation Platform Acknowledgements">
-    <meta name="keywords" content="Gaius, Documentation, Static Site Generator">
+    <meta name="description" content="Gaius Getting Started Guide Understanding the Gaius Site Structure">
+    <meta name="keywords" content="Gaius, Documentation, Static Site Generator, Getting Started, Understanding the Gaius Site Structure">
     <meta name="author" content="Robert Strube">
 
     <!-- Bootstrap CSS -->
@@ -19,7 +19,7 @@
     <!-- local CSS -->
     <link rel="stylesheet" href="//gaius-dev.github.io/gaius-docs/styles/main-637514554937265648.css">
 
-    <title>Acknowledgements</title>
+    <title>Understanding the Gaius Site Structure</title>
 </head>
   <body class="bg-white">
 
@@ -57,13 +57,14 @@
 
 <li class="nav-item">
 
-    <a class="nav-link " href="//gaius-dev.github.io/gaius-docs/pages/getting-started/">Getting Started
+    <a class="nav-link active" href="//gaius-dev.github.io/gaius-docs/pages/getting-started/">Getting Started
     </a>
 
-        <ul class="nav pl-4 mb-3 d-none">
+        <ul class="nav pl-4 mb-3 ">
             <!-- This loops through the site sidbar level 2-->
 <li class="nav-item">
-    <a class="nav-link small py-1 gaius-child-nav-link " href="//gaius-dev.github.io/gaius-docs/pages/getting-started/understanding-site-structure/">Understanding the Gaius Site Structure
+    <a class="nav-link small py-1 gaius-child-nav-link active" href="//gaius-dev.github.io/gaius-docs/pages/getting-started/understanding-site-structure/">Understanding the Gaius Site Structure
+            <span class="sr-only">(current)</span>
     </a>
 </li>        </ul>
 
@@ -87,8 +88,7 @@
 
 <li class="nav-item">
 
-    <a class="nav-link active" href="//gaius-dev.github.io/gaius-docs/pages/acknowledgements/">Acknowledgements
-            <span class="sr-only">(current)</span>
+    <a class="nav-link " href="//gaius-dev.github.io/gaius-docs/pages/acknowledgements/">Acknowledgements
     </a>
 
 
@@ -99,25 +99,47 @@
       <div class="container py-4 py-md-5">
         <main class="gaius-main has-sidebar" role="main">
 
-          <h3 class="mb-3">Acknowledgements</h3>
+          <h3 class="mb-3">Understanding the Gaius Site Structure</h3>
 
 
           <!-- Content here -->
-          <p>The Gaius platform would not be possible without some incredible open-source projects.  The Gaius engine leverages the following libraries:</p>
-<div class="row pb-3 align-items-center"><p class="col-auto">
-<img src="//gaius-dev.github.io/gaius-docs/images/pages/acknowledgements/markdig-logo.png" style="height:90px" alt="Markdig logo" /></p>
-<p class="col">
-<a href="https://github.com/lunet-io/markdig/">Markdig</a> is an incredible open-source markdown processing engine for .NET.  It also provides numerous extensions that can enhance the capabilities of the source markdown data.</p>
-</div>
-<div class="row pb-3 align-items-center"><p class="col-auto">
-<img src="//gaius-dev.github.io/gaius-docs/images/pages/acknowledgements/fluid-logo.png" style="height:90px" alt="Fluid logo" /></p>
-<p class="col">
-<a href="https://github.com/sebastienros/fluid">Fulid</a> is an open-source .NET template engine that is as close as possible to the Liquid template language.</p>
-</div>
-<div class="row pb-3 align-items-center"><p class="col-auto text-center" style="width:120px">
-<strong>YAML DotNet</strong></p>
-<p class="col">
-<a href="https://github.com/aaubry/YamlDotNet">YamlDotNet</a> is an excellent .NET based library for processing YAML.</p>
+          <p>Before starting to create new content, it will be helpful to review the Gaius site structure conventions.  They have been designed to be logical and easy to use.</p>
+<p>Below is an overview of the default Gaius site structure:</p>
+<pre><code>\{site container}   # Site Container Directory: the root for your Gaius site
+
+    \_generated     # Generation Directory: contains all generated site content
+                    #   (should be included in .gitignore)
+
+    \_source        # Source Directory: contains all of your source date
+        index.md        # The homepage for your site
+        \_drafts        # Contains draft posts (named YYYY-MM-DD-{name}.md)
+        \_posts         # Contains posts (named YYYY-MM-DD-{name}.md)
+        \_taglist       # Contains .md file used to drive dynamic tag listing pages
+            index.md        # Dynamic tag list .md file
+        \images         # Contains images referenced in your .md files
+        \pages          # Contains other dedicated pages (.md files)
+
+    \_themes            # Themes Directory: contains all available themes
+        \{theme name}       # Named Theme Directory: contains resources for a given theme
+            \_layouts           # Layouts Directory: contains liquid layouts
+                \_partials          # Partials Directory: contains all liquid partials
+            \images         # Contains theme images (e.g. images baked into theme)
+            \scripts        # Contains custom JS files the theme
+            \styles     # Contains custom CSS for the theme
+
+    \.github                
+        \gaius-process.yml  # Gaius Github Action Workflow
+
+    \bin                # Gaius Engine binaries
+
+    \.gitignore         # Ignores _generated folder
+
+    \gaius.json         # Gaius configuration file
+
+</code></pre>
+<div class="alert alert-warning"><p><strong>Alternative Gaius Site Structure</strong></p>
+<hr />
+<p>It is possible to customize the directory names used by the Gaius Engine (for example change <code>_generated</code> to <code>_output</code> for the <strong>Generation Directory</strong>).  Although this is possible, it's not recommended unless absolutely neccessary.  To make these adjuments modify your <code>gaius.json</code> file.</p>
 </div>
 
 
