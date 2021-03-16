@@ -44,9 +44,9 @@ Below is an overview of the default Gaius site structure:
     \gaius.json         # Gaius configuration file
 
 ```
-
-:::{.alert .alert-warning}
+{.alert .alert-warning}
+:::
 **Alternative Gaius Site Structure**
 ___
-It is possible to customize the directory names used by the Gaius Engine (for example change `_generated` to `_output` for the **Generation Directory**).  Although this is possible, it's not recommended unless absolutely neccessary.  To make these adjuments modify your `gaius.json` file.
+It is possible to customize the directory names used by the Gaius Engine (for example change `_generated` to `_output` for the **Generation Directory**).  Although this is possible, it's not recommended unless absolutely neccessary.  To make these adjuments modify your `gaius.json` file. See [Gaius Configuration]({{site.url}}/pages/getting-started/configuration/) for more information.
 :::

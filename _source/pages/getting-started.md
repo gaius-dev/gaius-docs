@@ -9,7 +9,8 @@ sidebar_order: 1
 
 The Gaius platform has been designed to get you up and running as quickly as possible.  That being said, Gaius is a platform that's geared more towards a technical audience.  If you're unfamiliar with **git** and working within a text editor / IDE you should probably look elsewhere.
 
-:::{.alert .alert-warning}
+{.alert .alert-warning}
+:::
 **Technical Chops Required**
 ___
 It's recommended that you have some experience and familarity with the following items before chosing Gaius:
@@ -20,27 +21,32 @@ It's recommended that you have some experience and familarity with the following
 1. Markdown files.
 :::
 
-#### Software Prerequisites{.pt-3}
+{.pt-3}
+#### Software Prerequisites
 
 Gauis requires certain software to be installed on your local system:
 
-###### .NET SDK / Runtimes{.pt-1}
+{.pt-1}
+##### .NET SDK / Runtimes
 
 Gaius is written in C# using .NET 5.0.  As such you'll need to install the proper **.NET SDK / Runtimes** on your local machine in order to build and test your site.  Please visit the [.NET 5.0 Download Page](https://dotnet.microsoft.com/download/dotnet/5.0) to download and install the .NET 5.0 SDK (latest version).
 
 For more information on exactly what to install and how to validate your .NET installation visit our [.NET Installation Guide]({{site.url}}/pages/advanced-installation/dotnet-installation/) guide.
 
-###### Git{.pt-1}
+{.pt-1}
+##### Git
 
 Git is required to bootstrap your new site from the [Gaius starter site](https://gaius-dev.github.io/gaius-starter).  It's also required if you wish to deploy your site to Github Pages.
 
-##### Bootstraping Your New Site{.pt-3}
+{.pt-3}
+#### Bootstraping Your New Site
 
 The [Gaius starter site](https://gaius-dev.github.io/gaius-starter) provides a *nearly* empty starter site that can be used as the basis for creating new sites.  It comes with a homepage (blog listing page), a single blog post, and the default Gaius theme.  It also comes with the latest version of the Gaius engine binaries.
 
 It's *highly* recommended that new users leverage the Gaius starter site when creating a new Gaius-based site.
 
-:::{.alert .alert-warning}
+{.alert .alert-warning}
+:::
 **Advanced Installation**
 ___
 There might be some unique situations where you don't want to use the Gaius starter site as the basis for your new site.  Please consult the [Gaius Advanced Installation]({{site.url}}/pages/advanced-installation/) guide for more information.
@@ -78,17 +84,20 @@ $ dotnet ./bin/gaius/gaius.dll version
 Gaius Engine X.X.XXX
 ```
 
-:::{.alert .alert-warning}
+{.alert .alert-warning}
+:::
 **Location of Gaius Engine Binaries**
 ___
 The standard location for the Gaius engine binaries is `<repo-name>/bin/gaius`.  When you cloned the Gaius starter site, the Gaius engine binaries were automatically downloaded and deployed at this location.
 :::
 
-#### Building and Testing Your Site{.pt-3}
+{.pt-3}
+#### Building and Testing Your Site
 
 You can now build and test your site locally.  To do this run Gaius with the `serve` command:
 
-:::{.alert .alert-warning}
+{.alert .alert-warning}
+:::
 **Wide Load**
 ___
 Gaius displays *lots* of information in your terminal.  For best results please maximize the terminal window, otherwise the content displayed will wrap in a way that makes it more difficult to read.
@@ -155,17 +164,20 @@ Do you wish to continue? (y/n)
 ```
 Enter `y` to build the site and launch the Gaius micro-server.  Your site will now be accessible via a web browser at `http://localhost:5000`.
 
-:::{.alert .alert-warning}
+{.alert .alert-warning}
+:::
 **Skipping the Build Prompt**
 ___
 If you don't want Gaius to prompt you, add the `--yes` switch after the `serve` command (e.g. `dotnet ./bin/gaius/gaius.dll serve --yes`).
 :::
-{.d-block}
-^^^
 
-![Gaius starter site running locally]({{site.url}}/images/pages/getting-started/gaius-starter-site.png){.d-block .img-thumbnail .mx-auto}
-^^^ Gaius starter site running locally{.text-center}
+{.text-center .pt-3}
+:::
+![Gaius starter site running locally]({{site.url}}/images/pages/getting-started/gaius-starter-site.png){.img-fluid .img-thumbnail}
+^^^ Gaius starter site running locally
+:::
 
+{.pt-3}
 The Gaius server will detect file system changes in the `_source` or `_themes/default` sub-directories.  When it detects changes, it will automatically rebuild your site.  While the server is running you'll see output similar to:
 
 {.bg-light}
