@@ -9,26 +9,30 @@ sidebar_order: 1
 
 The Gaius platform has been designed to get you up and running as quickly as possible.  That being said, Gaius is a platform that's geared more towards a technical audience.  If you're unfamiliar with **git** and working within a text editor / IDE you should probably look elsewhere.
 
+:::{.alert .alert-warning}
+**Technical Chops Required**
+___
 It's recommended that you have some experience and familarity with the following items before chosing Gaius:
 
 1. Working on the command line.
 1. **git**.
 1. Text editors (e.g. **vim**, **emacs**, **Notepad++**) or an IDE (e.g. **Visual Studio Code**).
 1. Markdown files.
+:::
 
 #### Software Prerequisites{.pt-3}
 
 Gauis requires certain software to be installed on your local system:
 
-###### .NET Runtime / SDK{.pt-1}
-Gaius is written in C# using .NET 5.0.  As such you'll need to install the proper **.NET SDK** on your local machine in order to build and test your site.  Please visit the [.NET Download Page](https://dotnet.microsoft.com/download/dotnet/5.0) to download and install the .NET 5.0 SDK (latest version).
+###### .NET SDK / Runtimes{.pt-1}
 
-For more information please consult the [.NET SDK Installation]({{site.url}}/) guide.
+Gaius is written in C# using .NET 5.0.  As such you'll need to install the proper **.NET SDK / Runtimes** on your local machine in order to build and test your site.  Please visit the [.NET 5.0 Download Page](https://dotnet.microsoft.com/download/dotnet/5.0) to download and install the .NET 5.0 SDK (latest version).
+
+For more information on exactly what to install and how to validate your .NET installation visit our [.NET Installation Guide]({{site.url}}/pages/advanced-installation/dotnet-installation/) guide.
 
 ###### Git{.pt-1}
-Git is required to bootstrap your new site from the [Gaius starter site](https://gaius-dev.github.io/gaius-starter).  It's also required if you wish to deploy your site to Github Pages.
 
-For more information please see the [Git Installation]({{site.url}}/) guide.
+Git is required to bootstrap your new site from the [Gaius starter site](https://gaius-dev.github.io/gaius-starter).  It's also required if you wish to deploy your site to Github Pages.
 
 ##### Bootstraping Your New Site{.pt-3}
 
@@ -39,7 +43,7 @@ It's *highly* recommended that new users leverage the Gaius starter site when cr
 :::{.alert .alert-warning}
 **Advanced Installation**
 ___
-There might be some unique situations where you don't want to use the Gaius starter site as the basis for your new site.  Please consult the [Gaius Advanced Installation]({{site.url}}/) guide for more information.
+There might be some unique situations where you don't want to use the Gaius starter site as the basis for your new site.  Please consult the [Gaius Advanced Installation]({{site.url}}/pages/advanced-installation/) guide for more information.
 :::
 
 In order to bootstrap your new site, you'll clone the `gaius-starter` repository.  Before cloning, consider what you'll call your new repository.  If you plan to deploy the site as a user Github Pages site, you'll most likely want to name the new repo `{username}.github.io`.
@@ -81,6 +85,7 @@ The standard location for the Gaius engine binaries is `<repo-name>/bin/gaius`. 
 :::
 
 #### Building and Testing Your Site{.pt-3}
+
 You can now build and test your site locally.  To do this run Gaius with the `serve` command:
 
 :::{.alert .alert-warning}
@@ -97,25 +102,31 @@ Gaius will now show a visualization of how the site *would* be built, and will a
 
 {.bg-light}
 ```shell
-[ Site Directory] /home/robert/Projects/gaius/rstrube.github.io
-[ Src. Directory] /home/robert/Projects/gaius/rstrube.github.io/_source
-[Theme Directory] /home/robert/Projects/gaius/rstrube.github.io/_themes/default
-[ Gen. Directory] /home/robert/Projects/gaius/rstrube.github.io/_generated
+[ Site Directory] /home/robert/Projects/gaius/gaius-starter
+[ Src. Directory] /home/robert/Projects/gaius/gaius-starter/_source
+[Theme Directory] /home/robert/Projects/gaius/gaius-starter/_themes/default
+[ Gen. Directory] /home/robert/Projects/gaius/gaius-starter/_generated
 [  Testmode On  ] True
 
-[ .. ] rstrube.github.io                     [ ..... root   R ] 
+[ .. ] gaius-starter                         [ ..... root   R ] 
 [ .. ] |_ _source                            [ copy  create + ] |_ _generated
-[ .. ]    |_ index.md                        [ trans create + ]    |_ [root] 
 [ .. ]    |_ _drafts                         [ ..... skip   _ ]    |_ /yyyy/MM/dd/[title]/
 [ .. ]    |_ _posts                          [ ..... skip   _ ]    |_ /yyyy/MM/dd/[title]/
+[ .. ]       |_ 2021-01-01-hello-world.md    [ trans create + ]       |_ /2021/01/01/hello-world/ 
 [ .. ]    |_ _taglist                        [ ..... skip   _ ]    |_ /tag/[tag]/
-[ .. ]       |_ index.md                     [ trans create + ]       |_ /tag/temp-tag/ 
+[ .. ]       |_ index.md                     [ trans create + ]       |_ /tag/hello-gaius-/ 
+[ .. ]       |_ index.md                     [ trans create + ]       |_ /tag/hello-world-/ 
+[ .. ]    |_ images                          [ copy  create + ]    |_ images
+[ .. ]       |_ author.webp                  [ copy  create + ]       |_ author.webp
+[ .. ]       |_ posts                        [ copy  create + ]       |_ posts
+[ .. ]          |_ hello-world.webp          [ copy  create + ]          |_ hello-world.webp
 [ .. ]    |_ pages                           [ copy  create + ]    |_ pages
-[ .. ]       |_ dedicated-page.md            [ trans create + ]       |_ /dedicated-page/ 
+[ .. ]       |_ authors                      [ copy  create + ]       |_ authors
+[ .. ]          |_ firstname-lastname.md     [ trans create + ]          |_ /firstname-lastname/ 
+[ .. ]    |_ index.md                        [ trans create + ]    |_ [root] 
 [ .. ] |_ _themes/default                    [ copy  create + ] |_ _generated
 [ .. ]    |_ _layouts                        [ ..... skip   _ ]    |_ _layouts
 [ .. ]       |_ author.liquid                [ ..... skip   _ ]       |_ author.liquid
-[ .. ]       |_ default-sidebar.liquid       [ ..... skip   _ ]       |_ default-sidebar.liquid
 [ .. ]       |_ default.liquid               [ ..... skip   _ ]       |_ default.liquid
 [ .. ]       |_ post.liquid                  [ ..... skip   _ ]       |_ post.liquid
 [ .. ]       |_ postlist.liquid              [ ..... skip   _ ]       |_ postlist.liquid
@@ -123,7 +134,7 @@ Gaius will now show a visualization of how the site *would* be built, and will a
 [ .. ]       |_ _partials                    [ copy  create + ]       |_ _partials
 [ .. ]          |_ _footer.liquid            [ ..... skip   _ ]          |_ _footer.liquid
 [ .. ]          |_ _head.liquid              [ ..... skip   _ ]          |_ _head.liquid
-[ .. ]          |_ _nav.liquid               [ ..... skip   _ ]          |_ _nav.liquid
+[ .. ]          |_ _nav_header.liquid        [ ..... skip   _ ]          |_ _nav_header.liquid
 [ .. ]          |_ _paging.liquid            [ ..... skip   _ ]          |_ _paging.liquid
 [ .. ]          |_ _post-teaser.liquid       [ ..... skip   _ ]          |_ _post-teaser.liquid
 [ .. ]          |_ _sidebar.liquid           [ ..... skip   _ ]          |_ _sidebar.liquid
@@ -131,14 +142,13 @@ Gaius will now show a visualization of how the site *would* be built, and will a
 [ .. ]             |_ _nav-item.liquid       [ ..... skip   _ ]             |_ _nav-item.liquid
 [ .. ]          |_ _sidebar                  [ copy  create + ]          |_ _sidebar
 [ .. ]             |_ _sidebar-item-2.liquid [ ..... skip   _ ]             |_ _sidebar-item-2.liquid
-[ .. ]             |_ _sidebar-item-3.liquid [ ..... skip   _ ]             |_ _sidebar-item-3.liquid
 [ .. ]             |_ _sidebar-item.liquid   [ ..... skip   _ ]             |_ _sidebar-item.liquid
 [ .. ]    |_ images                          [ copy  create + ]    |_ images
 [ .. ]       |_ logo.png                     [ copy  create + ]       |_ logo.png
 [ .. ]    |_ scripts                         [ copy  create + ]    |_ scripts
-[ .. ]       |_ main.js                      [ copy  create + ]       |_ main.js
+[ .. ]       |_ main.js                      [ copy  create + ]       |_ main-637514546776305205.js
 [ .. ]    |_ styles                          [ copy  create + ]    |_ styles
-[ .. ]       |_ main.css                     [ copy  create + ]       |_ main.css
+[ .. ]       |_ main.css                     [ copy  create + ]       |_ main-637514546776305205.css
 
 All of the proposed operations are considered safe.
 Do you wish to continue? (y/n)
@@ -166,10 +176,3 @@ info: Gaius.Server.BackgroundHostedService.BuildRequestQueueProcessorHostedServi
       Starting build request queue processor, listening for build requests
 ```
 When you're ready to terminate the server, press `CTRL+C` and the server will gracefully stop and return you to your shell.
-
-For more information on additional commands, please refer to the [Gaius Commands]({{site.url}}/) page.
-
-#### Next Steps{.pt-3}
-
-* To learn more about the site structure for Gaius sites and how to create and author content please refer to the [Authoring Content]({{site.url}}/) guide.
-* To learn how to deploy to Github Pages please refer to the [Deploying to Github Pages]({{site.url}}/pages/deploying-github-pages/) guide.

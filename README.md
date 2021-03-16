@@ -12,4 +12,4 @@ Gaius is an ultra-fast, extensible static site generation platform designed to w
 
 Please visit the official [Gaius documentation site](https://gaius-dev.github.io/gaius-docs/) for more information.
 
-![Gaius engine in action](https://github.com/gaius-dev/gaius-engine/raw/main/images/engine.png)
+![Gaius engine in action](https://github.com/gaius-dev/gaius-engine/raw/main/images/engine.webp)
