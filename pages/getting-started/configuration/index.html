@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="description" content="Gaius Getting Started Guide Gaius Configuration">
+    <meta name="keywords" content="Gaius, Documentation, Static Site Generator, Getting Started, Gaius Configuration">
+    <meta name="author" content="Robert Strube">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/default.min.css">
+    <!-- local CSS -->
+    <link rel="stylesheet" href="//gaius-dev.github.io/gaius-docs/styles/main-637514622175814159.css">
+
+    <title>Gaius Configuration</title>
+</head>
+  <body class="bg-white">
+
+<nav class="navbar navbar-expand-md navbar-light sticky-top flex-nowrap bg-light border-bottom gaius-navbar">
+
+    <button id="gaius-sidebar-toggler" class="btn btn-dark px-3 d-md-none" type="button">
+        <span class="bi-layout-text-sidebar"></span>
+    </button>
+
+    <a class="navbar-brand m-0" href="//gaius-dev.github.io/gaius-docs/">
+        <img src="//gaius-dev.github.io/gaius-docs/images/logo.png" height="50" />
+    </a>
+
+    <div id="gaius-navbar-content" class="collapse navbar-collapse">
+
+        <div class="navbar-nav ml-auto">
+
+            <!-- This loops through the site navigation -->
+<a class="nav-link " href="//gaius-dev.github.io/gaius-docs/">Gaius Documentation Home
+</a>
+        </div>
+    </div>
+
+</nav><!-- Sidebar -->
+<aside id="gaius-sidebar" class="bg-light border-right gaius-sidebar d-md-block">
+
+    <nav class="nav flex-column border-bottom py-2">
+        <!-- This loops through the site navigation -->
+<a class="nav-link " href="//gaius-dev.github.io/gaius-docs/">Gaius Documentation Home
+</a>    </nav>
+
+        <ul class="nav flex-column py-2">
+            <!-- This loops through the site sidebar -->
+<!-- logic to check if sibebar link is active -->
+
+<li class="nav-item">
+
+    <a class="nav-link active" href="//gaius-dev.github.io/gaius-docs/pages/getting-started/">Getting Started
+    </a>
+
+        <ul class="nav pl-4 mb-3 ">
+            <!-- This loops through the site sidbar level 2-->
+<li class="nav-item">
+    <a class="nav-link small py-1 gaius-child-nav-link " href="//gaius-dev.github.io/gaius-docs/pages/getting-started/understanding-site-structure/">Understanding the Gaius Site Structure
+    </a>
+</li><li class="nav-item">
+    <a class="nav-link small py-1 gaius-child-nav-link active" href="//gaius-dev.github.io/gaius-docs/pages/getting-started/configuration/">Gaius Configuration
+            <span class="sr-only">(current)</span>
+    </a>
+</li>        </ul>
+
+</li>
+<!-- logic to check if sibebar link is active -->
+
+<li class="nav-item">
+
+    <a class="nav-link " href="//gaius-dev.github.io/gaius-docs/pages/advanced-installation/">Advanced Installation
+    </a>
+
+        <ul class="nav pl-4 mb-3 d-none">
+            <!-- This loops through the site sidbar level 2-->
+<li class="nav-item">
+    <a class="nav-link small py-1 gaius-child-nav-link " href="//gaius-dev.github.io/gaius-docs/pages/advanced-installation/dotnet-installation/">.NET Installation
+    </a>
+</li>        </ul>
+
+</li>
+<!-- logic to check if sibebar link is active -->
+
+<li class="nav-item">
+
+    <a class="nav-link " href="//gaius-dev.github.io/gaius-docs/pages/acknowledgements/">Acknowledgements
+    </a>
+
+
+</li>
+        </ul>
+
+</aside>
+      <div class="container py-4 py-md-5">
+        <main class="gaius-main has-sidebar" role="main">
+
+          <h3 class="mb-3">Gaius Configuration</h3>
+
+
+          <!-- Content here -->
+          <p>The primary configuration file is <code>gaius.json</code> which should be placed directly in the <strong>Site Container Directory</strong>.</p>
+<p>Here is the default <code>gaius.json</code> file that comes with the <a href="https://github.com/gaius-dev/gaius-starter/">Gaius Starter Site</a>:</p>
+<pre><code class="language-json">{
+    &quot;Logging&quot;: {
+        &quot;LogLevel&quot;: {
+            &quot;Default&quot;: &quot;Information&quot;,
+            &quot;Microsoft&quot;: &quot;Warning&quot;,
+            &quot;Microsoft.Hosting.Lifetime&quot;: &quot;Warning&quot;
+        }
+    },
+    &quot;AllowedHosts&quot;: &quot;*&quot;,
+    &quot;GaiusEngine&quot;: {
+        &quot;SourceDirectoryName&quot;: &quot;_source&quot;,
+        &quot;GenerationDirectoryName&quot;: &quot;_generated&quot;,
+        &quot;ThemesDirectoryName&quot;: &quot;_themes&quot;,
+        &quot;PostsDirectoryName&quot;: &quot;_posts&quot;,
+        &quot;DraftsDirectoryName&quot;: &quot;_drafts&quot;,
+        &quot;PostUrlPrefix&quot;: &quot;&quot;,
+        &quot;TagListDirectoryName&quot;: &quot;_taglist&quot;,
+        &quot;TagUrlPrefix&quot;: &quot;tag&quot;,
+        &quot;ThemeName&quot;: &quot;default&quot;,
+        &quot;Pagination&quot;: 5,
+        &quot;GenerationUrlRootPrefix&quot;: &quot;//gaius-dev.github.io/gaius-starter&quot;,
+        &quot;AlwaysKeep&quot;: [
+            &quot;.git&quot;
+        ]
+    }
+}
+</code></pre>
+<p class="pt-3">
+You can modify this file to affect the way the Gaius Engine will generate your site.  All configuration properties that affect the Gaius Engine appear underneath the <code>GaiusEngine</code> object. Below is list of all the configuration properties and how they affect the Gaius Engine:</p>
+<table class="table table-striped table-bordered mt-4">
+<thead>
+<tr>
+<th>Configuration Property</th>
+<th>Description</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SourceDirectoryName</code></td>
+<td>Directory name for the <strong>Source Directory</strong></td>
+<td><code>_source</code></td>
+</tr>
+<tr>
+<td><code>GenerationDirectoryName</code></td>
+<td>Directory name for the <strong>Generation Directory</strong></td>
+<td><code>_generated</code></td>
+</tr>
+<tr>
+<td><code>ThemesDirectoryName</code></td>
+<td>Directory name for the <strong>Themes Directory</strong></td>
+<td><code>_themes</code></td>
+</tr>
+<tr>
+<td><code>PostsDirectoryName</code></td>
+<td>Directory name for the <strong>Posts Directory</strong></td>
+<td><code>_posts</code></td>
+</tr>
+<tr>
+<td><code>DraftsDirectoryName</code></td>
+<td>Directory name for the <strong>Draft Posts Directory</strong></td>
+<td><code>_drafts</code></td>
+</tr>
+<tr>
+<td><code>PostUrlPrefix</code></td>
+<td>URL segment prefix for all posts.  Orginarily URLs to posts are: <code>{host}/YYYY/MM/DD/{name}/</code>.  If you specifiy a value, URLs to posts would be: <code>{host}/{prefix}/YYYY/MM/DD/{name}/</code></td>
+<td><code>&quot;&quot;</code></td>
+</tr>
+<tr>
+<td><code>TagListDirectoryName</code></td>
+<td>Directory name for the <strong>Tag List Directory</strong></td>
+<td><code>_taglist</code></td>
+</tr>
+<tr>
+<td><code>TagUrlPrefix</code></td>
+<td>URL segment prefix for all dynamic tag list pages.  URLs to posts are: <code>{host}/{prefix}/{tag name}/</code>. <strong>Note: value cannot be <code>&lt;empty&gt;</code></strong></td>
+<td><code>tag</code></td>
+</tr>
+<tr>
+<td><code>ThemeName</code></td>
+<td>The theme that should be used</td>
+<td><code>default</code></td>
+</tr>
+<tr>
+<td><code>Pagination</code></td>
+<td>How many items per listing page</td>
+<td><code>5</code></td>
+</tr>
+<tr>
+<td><code>GenerationUrlRootPrefix</code></td>
+<td>A prefix that should be applied to all URLs. <strong>Note: only applied when <em>not</em> building the site using Test-Mode</strong></td>
+<td><code>&quot;&quot;</code></td>
+</tr>
+<tr>
+<td><code>AlwaysKeep</code></td>
+<td>An array of directory / file names that should never be deleted from the <strong>Generation Directory</strong> when building your site</td>
+<td><code>[ &quot;.git&quot; ]</code></td>
+</tr>
+</tbody>
+</table>
+<h4 class="pt-3">When Should I Use <code>GenerationUrlRootPrefix</code>?</h4>
+<p>By default <a href="https://pages.github.com/">Github Pages</a> <strong>Project Sites</strong> to will appear under the URL <code>https://{github organization or user}.github.io/{project name}/</code>.  For example the Github Pages site for the Gaius Starter Site is <code>https://gaius-dev.github.io/gaius-starter/</code>.  This is because <code>gaius-starter</code> is a project underneath the <code>gaius-dev</code> Github organization.</p>
+<p>The primary Github Pages site for the <code>gaius-dev</code> organization would be <code>https://gaius-dev.github.io/</code> and would <em>not</em> require a <code>GenerationUrlRootPrefix</code> value.  It doesn't hurt to explicitly include it anyway.</p>
+<p>So the rule is:</p>
+<ul>
+<li>If you are depolying to a Github Pages project site <strong>you must include a <code>GenerationUrlRootPrefix</code> value</strong>.</li>
+<li>If you are deploying to a primary user or organization site (e.g. <code>https://gaius-dev.github.io/</code> or <code>https://rstrube.github.io</code>) you can leave this value empty.</li>
+</ul>
+<h4 class="pt-3">Why Keep <code>.git</code> in the Generation Directory?</h4>
+<p>In some advanced scenarios you might want to maintain a separate git repository in <strong>Generation Directory</strong> that is associated with a dedicated branch with your upstream remote.  Under most ordinary circumstances this isn't neccessary as the Github Actions Workflow will automatically handle bulding your site and commiting the generated site assets to the <code>gh-pages</code> branch.</p>
+<p>The default value is here to help users that wish to implement more complex git workflows when building and pushing their generated site assets.</p>
+
+
+        </main>
+      </div>
+
+<footer class="position-relative d-flex flex-nowrap align-items-center px-3 py-3 bg-light border-top border-bottom gaius-footer">
+
+    <p class="text-muted small m-0">
+      Generated by <a href="https://github.com/gaius-dev/gaius-engine/releases">Gaius v0.170.1</a> on 2021-03-16 03:30:17Z.<br/>
+      Please visit the <a href="https://gaius-dev.github.io/gaius-docs/">Gaius documentation site</a> for more information.<br/>
+      Gaius <a href="https://github.com/gaius-dev/gaius-themes">default theme</a> is built on © <a href="https://getbootstrap.com/">Bootstrap</a>.
+    </p>
+
+</footer>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="//cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="//cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+<!-- highlight.js -->
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"></script>
+<!-- local JS -->
+<script src="//gaius-dev.github.io/gaius-docs/scripts/main-637514622175814159.js"></script>
+<!-- initiate highlight.js -->
+<script>hljs.highlightAll();</script>      
+  </body>
+</html>
