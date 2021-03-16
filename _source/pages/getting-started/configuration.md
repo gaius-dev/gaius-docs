@@ -50,9 +50,9 @@ You can modify this file to affect the way the Gaius Engine will generate your s
 |`ThemesDirectoryName`|Directory name for the **Themes Directory**|`_themes`|
 |`PostsDirectoryName`|Directory name for the **Posts Directory**|`_posts`|
 |`DraftsDirectoryName`|Directory name for the **Draft Posts Directory**|`_drafts`|
-|`PostUrlPrefix`|URL segment prefix for all posts.  Orginarily URLs to posts are: `{host}/YYYY/MM/DD/{name}/`.  If you specifiy a value, URLs to posts would be: `{host}/{prefix}/YYYY/MM/DD/{name}/`|`""`|
+|`PostUrlPrefix`|URL segment prefix for all posts.  Orginarily URLs to posts are: `{host}/YYYY/MM/DD/{name}/`. If you specifiy a value, URLs to posts would be: `{host}/{prefix}/YYYY/MM/DD/{name}/`|`""`|
 |`TagListDirectoryName`|Directory name for the **Tag List Directory**|`_taglist`|
-|`TagUrlPrefix`|URL segment prefix for all dynamic tag list pages.  URLs to posts are: `{host}/{prefix}/{tag name}/`. **Note: value cannot be `<empty>`**|`tag`|
+|`TagUrlPrefix`|URL segment prefix for all dynamic tag list pages.  URLs to posts are: `{host}/{prefix}/{tag name}/`. **Note: value cannot be `"" or null`**|`tag`|
 |`ThemeName`|The theme that should be used|`default`|
 |`Pagination`|How many items per listing page|`5`|
 |`GenerationUrlRootPrefix`|A prefix that should be applied to all URLs. **Note: only applied when *not* building the site using Test-Mode**|`""`|
