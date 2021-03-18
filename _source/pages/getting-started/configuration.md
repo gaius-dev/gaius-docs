@@ -42,6 +42,7 @@ Here is the default `gaius.json` file that comes with the [Gaius Starter Site](h
 {.pt-3}
 You can modify this file to affect the way the Gaius Engine will generate your site.  All configuration properties that affect the Gaius Engine appear underneath the `GaiusEngine` object. Below is list of all the configuration properties and how they affect the Gaius Engine:
 
+
 {.table .table-striped .table-bordered .mt-4}
 |Configuration Property|Description|Default Value|
 |--|--|--|
