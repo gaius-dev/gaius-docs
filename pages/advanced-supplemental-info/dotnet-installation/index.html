@@ -6,8 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <meta name="description" content="Advanced Installation Guide">
-    <meta name="keywords" content="Gaius, Documentation, Static Site Generator, Advanced Installation Guide">
+    <meta name="description" content="Advanced Topics .NET Installation Guide">
+    <meta name="keywords" content="Gaius, Documentation, Static Site Generator, Advanced Topics, .NET Installation">
     <meta name="author" content="Robert Strube">
 
     <!-- Bootstrap CSS -->
@@ -17,9 +17,9 @@
     <!-- highlight.js -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/default.min.css">
     <!-- local CSS -->
-    <link rel="stylesheet" href="//gaius-dev.github.io/gaius-docs/styles/main-637516227607824399.css">
+    <link rel="stylesheet" href="/gaius-docs/styles/main-637517942517857421.css">
 
-    <title>Advanced Installation</title>
+    <title>.NET Installation</title>
 </head>
   <body class="bg-white">
 
@@ -29,8 +29,8 @@
         <span class="bi-layout-text-sidebar"></span>
     </button>
 
-    <a class="navbar-brand m-0" href="//gaius-dev.github.io/gaius-docs/">
-        <img src="//gaius-dev.github.io/gaius-docs/images/logo.png" height="50" />
+    <a class="navbar-brand m-0" href="/gaius-docs/">
+        <img src="/gaius-docs/images/logo.png" height="50" />
     </a>
 
     <div id="gaius-navbar-content" class="collapse navbar-collapse">
@@ -38,7 +38,7 @@
         <div class="navbar-nav ml-auto">
 
             <!-- This loops through the site navigation -->
-<a class="nav-link " href="//gaius-dev.github.io/gaius-docs/">Gaius Documentation Home
+<a class="nav-link " href="/gaius-docs/">Gaius Documentation Home
 </a>
         </div>
     </div>
@@ -48,7 +48,7 @@
 
     <nav class="nav flex-column border-bottom py-2">
         <!-- This loops through the site navigation -->
-<a class="nav-link " href="//gaius-dev.github.io/gaius-docs/">Gaius Documentation Home
+<a class="nav-link " href="/gaius-docs/">Gaius Documentation Home
 </a>    </nav>
 
         <ul class="nav flex-column py-2">
@@ -57,16 +57,19 @@
 
 <li class="nav-item">
 
-    <a class="nav-link " href="//gaius-dev.github.io/gaius-docs/pages/getting-started/">Getting Started
+    <a class="nav-link " href="/gaius-docs/pages/getting-started/">Getting Started
     </a>
 
         <ul class="nav pl-4 mb-3">
             <!-- This loops through the site sidbar level 2-->
 <li class="nav-item">
-    <a class="nav-link small py-1 gaius-child-nav-link " href="//gaius-dev.github.io/gaius-docs/pages/getting-started/understanding-site-structure/">Understanding the Gaius Site Structure
+    <a class="nav-link small py-1 gaius-child-nav-link " href="/gaius-docs/pages/getting-started/understanding-site-structure/">Understanding the Gaius Site Structure
     </a>
 </li><li class="nav-item">
-    <a class="nav-link small py-1 gaius-child-nav-link " href="//gaius-dev.github.io/gaius-docs/pages/getting-started/configuration/">Gaius Configuration
+    <a class="nav-link small py-1 gaius-child-nav-link " href="/gaius-docs/pages/getting-started/configuration/">Gaius Configuration
+    </a>
+</li><li class="nav-item">
+    <a class="nav-link small py-1 gaius-child-nav-link " href="/gaius-docs/pages/getting-started/building-testing-site/">Building and Testing your Site
     </a>
 </li>        </ul>
 
@@ -75,14 +78,14 @@
 
 <li class="nav-item">
 
-    <a class="nav-link active" href="//gaius-dev.github.io/gaius-docs/pages/advanced-installation/">Advanced Installation
-            <span class="sr-only">(current)</span>
+    <a class="nav-link active" href="/gaius-docs/pages/advanced-supplemental-info/">Advanced & Supplemental Information
     </a>
 
         <ul class="nav pl-4 mb-3">
             <!-- This loops through the site sidbar level 2-->
 <li class="nav-item">
-    <a class="nav-link small py-1 gaius-child-nav-link " href="//gaius-dev.github.io/gaius-docs/pages/advanced-installation/dotnet-installation/">.NET Installation
+    <a class="nav-link small py-1 gaius-child-nav-link active" href="/gaius-docs/pages/advanced-supplemental-info/dotnet-installation/">.NET Installation
+            <span class="sr-only">(current)</span>
     </a>
 </li>        </ul>
 
@@ -91,7 +94,7 @@
 
 <li class="nav-item">
 
-    <a class="nav-link " href="//gaius-dev.github.io/gaius-docs/pages/acknowledgements/">Acknowledgements
+    <a class="nav-link " href="/gaius-docs/pages/acknowledgements/">Acknowledgements
     </a>
 
 
@@ -102,11 +105,35 @@
       <div class="container py-4 py-md-5">
         <main class="gaius-main has-sidebar" role="main">
 
-          <h3 class="mb-3">Advanced Installation</h3>
+          <h3 class="mb-3">.NET Installation</h3>
 
 
           <!-- Content here -->
-          <p>Documentation is still a work in progress...</p>
+          <p>Gaius requires the .NET SDK or specific .NET Runtimes to be installed.</p>
+<p>For Windows, MacOS, and most common Linux distributions (Ubuntu, Fedora, etc.) please visit the <a href="https://dotnet.microsoft.com/download/dotnet/5.0/">.NET 5.0 Download Page</a> to download and install the .NET 5.0 SDK / Runtimes.</p>
+<p>The simplest approach is to install the full .NET 5.0 SDK, which includes the following runtimes:</p>
+<ul>
+<li>.NET Runtime 5.0.x <strong>(required by Gaius)</strong></li>
+<li>ASP.NET Core Runtime 5.0.x <strong>(required by Gaius)</strong></li>
+<li>.NET Desktop Runtime 5.0.x</li>
+</ul>
+<p>It's also possible to install just the <strong>.NET Runtime</strong> and the <strong>ASP.NET Core Runtime</strong>.  This has a smaller installation footprint, but the installation is more piecemeal.</p>
+<h4 class="pt-3">Arch Linux .NET Installation (Recommended Packages)</h4>
+<p>For Arch Linux users it is recommended to use the AUR .NET packages as these are kept more up to date.</p>
+<p>Use an AUR helper (e.g. <a href="">Paru</a> or <a href="">Yay</a>) to install the required packages:</p>
+<pre><code class="language-shell">paru -Syu dotnet-host-bin dotnet-runtime-bin dotnet-sdk-bin dotnet-targeting-pack-bin aspnet-runtime-bin aspnet-targeting-pack-bin
+</code></pre>
+<h4 class="pt-3">Validating your .NET Installation</h4>
+<p>Run some terminal commands to validate your .NET installation:</p>
+<pre><code class="language-shell">$ dotnet --version
+5.0.xxx
+
+$ dotnet --list-runtimes 
+Microsoft.AspNetCore.App 5.0.x [/usr/share/dotnet/shared/Microsoft.AspNetCore.App]
+Microsoft.NETCore.App 5.0.x [/usr/share/dotnet/shared/Microsoft.NETCore.App]
+
+</code></pre>
+<p><em>Note: there might be additional runtimes listed if you installed the full .NET SDK.</em></p>
 
 
         </main>
@@ -115,7 +142,7 @@
 <footer class="position-relative d-flex flex-nowrap align-items-center px-3 py-3 bg-light border-top border-bottom gaius-footer">
 
     <p class="text-muted small m-0">
-      Generated by <a href="https://github.com/gaius-dev/gaius-engine/releases">Gaius v0.170.3</a> on 2021-03-18 00:06:00Z.<br/>
+      Generated by <a href="https://github.com/gaius-dev/gaius-engine/releases">Gaius v0.170.4</a> on 2021-03-19 23:44:11Z.<br/>
       Please visit the <a href="https://gaius-dev.github.io/gaius-docs/">Gaius documentation site</a> for more information.<br/>
       Gaius <a href="https://github.com/gaius-dev/gaius-themes">default theme</a> is built on © <a href="https://getbootstrap.com/">Bootstrap</a>.
     </p>
@@ -131,7 +158,7 @@
 <!-- highlight.js -->
 <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"></script>
 <!-- local JS -->
-<script src="//gaius-dev.github.io/gaius-docs/scripts/main-637516227607824399.js"></script>
+<script src="/gaius-docs/scripts/main-637517942517857421.js"></script>
 <!-- initiate highlight.js -->
 <script>hljs.highlightAll();</script>      
   </body>
