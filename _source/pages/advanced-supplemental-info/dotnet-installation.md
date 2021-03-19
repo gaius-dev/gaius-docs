@@ -2,8 +2,8 @@
 layout: default
 title: .NET Installation
 author: Robert Strube
-keywords: Gaius, Documentation, Static Site Generator, Advanced Installation Guide, .NET Installation
-description: .NET Installation Guide
+keywords: Gaius, Documentation, Static Site Generator, Advanced Topics, .NET Installation
+description: Advanced Topics .NET Installation Guide
 sidebar_order: 2.1
 ...
 

@@ -18,7 +18,7 @@
         "TagUrlPrefix": "tag",
         "ThemeName": "default",
         "Pagination": 5,
-        "GenerationUrlRootPrefix": "//gaius-dev.github.io/gaius-docs",
+        "GenerationUrlRootPrefix": "/gaius-docs",
         "AlwaysKeep": [
             ".git"
         ]

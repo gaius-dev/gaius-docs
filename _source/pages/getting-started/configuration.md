@@ -32,7 +32,7 @@ Here is the default `gaius.json` file that comes with the [Gaius Starter Site](h
         "TagUrlPrefix": "tag",
         "ThemeName": "default",
         "Pagination": 5,
-        "GenerationUrlRootPrefix": "//gaius-dev.github.io/gaius-starter",
+        "GenerationUrlRootPrefix": "/gaius-starter",
         "AlwaysKeep": [
             ".git"
         ]
